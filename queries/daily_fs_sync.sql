@@ -4,7 +4,6 @@
 
 USE bi_database;
 SET sql_safe_updates = 0;
-
 TRUNCATE TABLE bi_database.fact_saless;
 
 -- Part 1: INSERT Invoice Sales
@@ -557,9 +556,7 @@ SET margin_pct = CASE
 END
 WHERE margin_pct IS NULL OR margin_pct = 0;
 
+select max(sale_date) from fact_saless fs ;
 -- ################################################################################
-
 ## ETL SCRIPT COMPLETED HERE
-
 -- ################################################################################
-
