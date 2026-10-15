@@ -23,6 +23,40 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt.txt ]; then pip install -r requirements.txt.txt; fi
 
+      - name: Run Daily FS Sync SQL Script First
+        env:
+          DB_HOST: ${{ secrets.BI_DB_HOST }}
+          DB_USER: ${{ secrets.BI_DB_USER }}
+          DB_PASSWORD: ${{ secrets.BI_DB_PASS }}
+          DB_NAME: ${{ secrets.BI_DB_NAME }}
+          DB_PORT: ${{ secrets.BI_DB_PORT }}
+        run: |
+          python -c "
+          import os
+          import mysql.connector
+
+          conn = mysql.connector.connect(
+              host=os.environ['DB_HOST'],
+              user=os.environ['DB_USER'],
+              password=os.environ['DB_PASSWORD'],
+              database=os.environ['DB_NAME'],
+              port=int(os.environ.get('DB_PORT', 3306))
+          )
+          cursor = conn.cursor()
+          
+          with open('queries/daily_fs_sync.sql', 'r', encoding='utf-8') as f:
+              sql_script = f.read()
+
+          # SQL ဖိုင်ထဲမှာ statement မျိုးစုံပါရင် multi=True သုံးပြီး တစ်ကြောင်းချင်း execute လုပ်ရန်
+          for result in cursor.execute(sql_script, multi=True):
+              pass
+              
+          conn.commit()
+          cursor.close()
+          conn.close()
+          print('SQL script executed successfully!')
+          "
+
       - name: Run update_products_in_db.py
         env:
           DB_HOST: ${{ secrets.BI_DB_HOST }}
