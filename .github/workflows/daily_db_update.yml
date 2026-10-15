@@ -1,4 +1,4 @@
-name: Daily Update Products in DB
+name: Daily Update Fact Sale Table in BI Database
 
 on:
   schedule:
