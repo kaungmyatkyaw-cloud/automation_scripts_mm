@@ -8,7 +8,7 @@ This repository contains automated data engineering and database synchronization
 
 * **Database Update**: Automatically synchronizes and updates product/sales metrics in the production MySQL database.
 * **SQL Automation**: Executes daily staging and synchronization scripts (`daily_fs_sync.sql`) prior to running core Python pipelines.
-* **Email Distribution**: Automatically dispatches reports and operational notifications to respective departments based on scope configuration.
+* **Email Distribution**: Automatically dispatches reports and operational notifications to respective demand of each business unit based on scope configuration.
 * **Scheduler**: Runs automatically every day via GitHub Actions workflow (`cron`).
 
 ---
