@@ -65,3 +65,37 @@ jobs:
           DB_NAME: ${{ secrets.BI_DB_NAME }}
           DB_PORT: ${{ secrets.BI_DB_PORT }}
         run: python update_products_in_db.py
+      
+      - name: Run ABC Analysis Views SQL Script After
+        env:
+          DB_HOST: ${{ secrets.BI_DB_HOST }}
+          DB_USER: ${{ secrets.BI_DB_USER }}
+          DB_PASSWORD: ${{ secrets.BI_DB_PASS }}
+          DB_NAME: ${{ secrets.BI_DB_NAME }}
+          DB_PORT: ${{ secrets.BI_DB_PORT }}
+        run: |
+          python -c "
+          import os
+          import mysql.connector
+
+          conn = mysql.connector.connect(
+              host=os.environ['DB_HOST'],
+              user=os.environ['DB_USER'],
+              password=os.environ['DB_PASSWORD'],
+              database=os.environ['DB_NAME'],
+              port=int(os.environ.get('DB_PORT', 3306))
+          )
+          cursor = conn.cursor()
+          
+          with open('queries/abc_analysis_views.sql', 'r', encoding='utf-8') as f:
+              sql_script = f.read()
+
+          for result in cursor.execute(sql_script, multi=True):
+              pass
+              
+          conn.commit()
+          cursor.close()
+          conn.close()
+          print('ABC Analysis SQL script executed successfully!')
+          "
+            
