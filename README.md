@@ -1,4 +1,4 @@
-# 📊 Automated Daily Database Update & Reporting (MM)
+# Automated Sale Database Update & Reporting (M-BI)
 
 This repository contains automated data engineering and database synchronization scripts designed for daily execution via **GitHub Actions**. It handles automated database updates, SQL sync procedures, and stakeholder email reporting.
 
