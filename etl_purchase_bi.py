@@ -4,17 +4,17 @@ import logging
 import pymysql
 from dotenv import load_dotenv
 
-# Logging ကို စနစ်တကျ ပြင်ဆင်ခြင်း
+# Configure logging to English only
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[logging.StreamHandler(sys.stdout)]
 )
 
-# .env ဖိုင်ကို ဖတ်ယူခြင်း
+# Load environment variables from .env file
 load_dotenv()
 
-# Environment Variables များ ရယူခြင်း
+# Function to require environment variables
 def require_env(name: str) -> str:
     value = os.getenv(name)
     if not value:
@@ -27,7 +27,7 @@ DB_USER = require_env("BI_DB_USER")
 DB_PASS = require_env("BI_DB_PASS")
 DB_NAME = require_env("BI_DB_NAME")
 
-# Database Connection တည်ဆောက်ခြင်း
+# Establish Database Connection
 def get_db_connection():
     try:
         connection = pymysql.connect(
@@ -38,19 +38,19 @@ def get_db_connection():
             database=DB_NAME,
             ssl={'ssl_mode': 'REQUIRED'},  # DigitalOcean Managed MySQL
             connect_timeout=30,
-            autocommit=False  # Transaction control အတွက် False ထားပါသည်
+            autocommit=False
         )
         return connection
     except pymysql.MySQLError as e:
-        logging.error(f"Database ချိတ်ဆက်မှု မအောင်မြင်ပါ: {e}")
+        logging.error(f"Database connection failed: {e}")
         sys.exit(1)
 
 def refresh_purchase_records():
     connection = get_db_connection()
     cursor = connection.cursor()
     
-    # ရှင်းလင်းပြီး စနစ်တကျ ပုံစံထုတ်ထားသော SQL Query
-    sql_query = """
+    # 1. Main Table Insert Query
+    sql_insert = """
     INSERT INTO bi_daily_purchase_records (
         business_id, business_name, branch_id, branch_name, warehouse_id, warehouse_name,
         supplier_group_id, supplier_group_name, supplier_id, supplier_name, supplier_phone, supplier_mobile, supplier_email,
@@ -109,36 +109,72 @@ def refresh_purchase_records():
         bill.remaining_balance AS outstanding_balance,
         bill.created_at AS bill_created_at,
         bill.updated_at AS bill_updated_at
-    FROM bills AS bill
-    INNER JOIN businesses AS b ON bill.business_id = b.id
-    INNER JOIN branches AS br ON bill.branch_id = br.id
-    INNER JOIN warehouses AS w ON bill.warehouse_id = w.id
-    INNER JOIN suppliers AS s ON bill.supplier_id = s.id
-    LEFT JOIN supplier_groups sg ON s.group_id = sg.id
-    INNER JOIN currencies AS curr ON bill.currency_id = curr.id
-    LEFT JOIN bill_details AS bd ON bd.bill_id = bill.id
-    LEFT JOIN products AS p ON bd.product_id = p.id
+    FROM `das-db`.bills AS bill
+    INNER JOIN `das-db`.businesses AS b ON bill.business_id = b.id
+    INNER JOIN `das-db`.branches AS br ON bill.branch_id = br.id
+    INNER JOIN `das-db`.warehouses AS w ON bill.warehouse_id = w.id
+    INNER JOIN `das-db`.suppliers AS s ON bill.supplier_id = s.id
+    LEFT JOIN `das-db`.supplier_groups sg ON s.group_id = sg.id
+    INNER JOIN `das-db`.currencies AS curr ON bill.currency_id = curr.id
+    LEFT JOIN `das-db`.bill_details AS bd ON bd.bill_id = bill.id
+    LEFT JOIN `das-db`.products AS p ON bd.product_id = p.id
     ORDER BY bill.bill_date DESC, bill.id DESC, bd.id ASC;
     """
 
+    # 2. Business Unit Views Creation Queries
+    sql_view_m_kitchen = """
+    CREATE OR REPLACE VIEW vw_bi_purchase_m_kitchen AS
+    SELECT * FROM bi_daily_purchase_records
+    WHERE business_id = '84093770-29ad-4e8e-9da1-babe583c0d69'
+      AND branch_id = 34;
+    """
+
+    sql_view_m_trading = """
+    CREATE OR REPLACE VIEW vw_bi_purchase_m_trading AS
+    SELECT * FROM bi_daily_purchase_records
+    WHERE (
+        (business_id = '84093770-29ad-4e8e-9da1-babe583c0d69' AND (TRIM(CAST(branch_id AS CHAR)) != '34' OR branch_id IS NULL))
+        OR 
+        (business_id = '7ef7c6c0-b59d-4be9-960c-7fa573038642')
+    );
+    """
+
+    sql_view_shwezay = """
+    CREATE OR REPLACE VIEW vw_bi_purchase_shwezay AS
+    SELECT * FROM bi_daily_purchase_records
+    WHERE business_id IN (
+        'ac4dd67c-738e-4dfe-a475-fc65f2a9ca08', -- ygn
+        '2d393763-d5c7-42be-b345-84b7be787f10', -- npt
+        '1eb52cc2-7a34-43d8-b646-67cc60402916'  -- kpg
+    );
+    """
+
     try:
-        logging.info("ETL Sync လုပ်ငန်းစဉ် စတင်နေပါပြီ...")
+        logging.info("ETL sync process started...")
         
-        # 1. Truncate Table (Existing records များကို ဖယ်ရှားခြင်း)
+        # 1. Truncate Table
         cursor.execute("TRUNCATE TABLE bi_daily_purchase_records;")
         logging.info("Table `bi_daily_purchase_records` successfully truncated.")
         
-        # 2. Insert New Data from Source Query
-        cursor.execute(sql_query)
+        # 2. Insert New Data
+        cursor.execute(sql_insert)
         row_count = cursor.rowcount
+        logging.info(f"Master table successfully loaded with {row_count} records.")
+
+        # 3. Create or Replace Views for Business Units
+        logging.info("Creating business unit views...")
+        cursor.execute(sql_view_m_kitchen)
+        cursor.execute(sql_view_m_trading)
+        cursor.execute(sql_view_shwezay)
+        logging.info("Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).")
         
-        # 3. Commit Transaction
+        # Commit Transaction
         connection.commit()
-        logging.info(f"ETL Sync အောင်မြင်ပါသည်! စုစုပေါင်း Records အရေအတွက် ({row_count}) ခု ထည့်သွင်းပြီးပါပြီ။")
+        logging.info("ETL sync process completed successfully.")
 
     except Exception as e:
         connection.rollback()
-        logging.error(f"[Error] ETL Sync မအောင်မြင်ပါ (Rolled back): {e}")
+        logging.error(f"ETL sync failed (Rolled back): {e}")
         sys.exit(1)
         
     finally:
