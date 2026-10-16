@@ -2,7 +2,7 @@ name: Daily Update in BI Database
 
 on:
   schedule:
-    - cron: '17 1 * * *'  # Runs at 1:17 AM UTC every day
+    - cron: '30 23 * * *'  # Runs at 6:00 AM Myanmar time (UTC+6:30)
   workflow_dispatch:
 
 jobs:
@@ -25,22 +25,22 @@ jobs:
 
       - name: Run Daily FS Sync SQL Script First
         env:
-          DB_HOST: ${{ secrets.BI_DB_HOST }}
-          DB_USER: ${{ secrets.BI_DB_USER }}
-          DB_PASSWORD: ${{ secrets.BI_DB_PASS }}
-          DB_NAME: ${{ secrets.BI_DB_NAME }}
-          DB_PORT: ${{ secrets.BI_DB_PORT }}
+          BI_DB_HOST: ${{ secrets.BI_DB_HOST }}
+          BI_DB_USER: ${{ secrets.BI_DB_USER }}
+          BI_DB_PASS: ${{ secrets.BI_DB_PASS }}
+          BI_DB_NAME: ${{ secrets.BI_DB_NAME }}
+          BI_DB_PORT: ${{ secrets.BI_DB_PORT }}
         run: |
           python -c "
           import os
           import mysql.connector
 
           conn = mysql.connector.connect(
-              host=os.environ['DB_HOST'],
-              user=os.environ['DB_USER'],
-              password=os.environ['DB_PASSWORD'],
-              database=os.environ['DB_NAME'],
-              port=int(os.environ.get('DB_PORT', 3306))
+              host=os.environ['BI_DB_HOST'],
+              user=os.environ['BI_DB_USER'],
+              password=os.environ['BI_DB_PASS'],
+              database=os.environ['BI_DB_NAME'],
+              port=int(os.environ.get('BI_DB_PORT') or 25060)
           )
           cursor = conn.cursor()
           
@@ -59,31 +59,31 @@ jobs:
 
       - name: Run update_products_in_db.py
         env:
-          DB_HOST: ${{ secrets.BI_DB_HOST }}
-          DB_USER: ${{ secrets.BI_DB_USER }}
-          DB_PASSWORD: ${{ secrets.BI_DB_PASS }}
-          DB_NAME: ${{ secrets.BI_DB_NAME }}
-          DB_PORT: ${{ secrets.BI_DB_PORT }}
+          BI_DB_HOST: ${{ secrets.BI_DB_HOST }}
+          BI_DB_USER: ${{ secrets.BI_DB_USER }}
+          BI_DB_PASS: ${{ secrets.BI_DB_PASS }}
+          BI_DB_NAME: ${{ secrets.BI_DB_NAME }}
+          BI_DB_PORT: ${{ secrets.BI_DB_PORT }}
         run: python update_products_in_db.py
       
       - name: Run ABC Analysis Views SQL Script After
         env:
-          DB_HOST: ${{ secrets.BI_DB_HOST }}
-          DB_USER: ${{ secrets.BI_DB_USER }}
-          DB_PASSWORD: ${{ secrets.BI_DB_PASS }}
-          DB_NAME: ${{ secrets.BI_DB_NAME }}
-          DB_PORT: ${{ secrets.BI_DB_PORT }}
+          BI_DB_HOST: ${{ secrets.BI_DB_HOST }}
+          BI_DB_USER: ${{ secrets.BI_DB_USER }}
+          BI_DB_PASS: ${{ secrets.BI_DB_PASS }}
+          BI_DB_NAME: ${{ secrets.BI_DB_NAME }}
+          BI_DB_PORT: ${{ secrets.BI_DB_PORT }}
         run: |
           python -c "
           import os
           import mysql.connector
 
           conn = mysql.connector.connect(
-              host=os.environ['DB_HOST'],
-              user=os.environ['DB_USER'],
-              password=os.environ['DB_PASSWORD'],
-              database=os.environ['DB_NAME'],
-              port=int(os.environ.get('DB_PORT', 3306))
+              host=os.environ['BI_DB_HOST'],
+              user=os.environ['BI_DB_USER'],
+              password=os.environ['BI_DB_PASS'],
+              database=os.environ['BI_DB_NAME'],
+              port=int(os.environ.get('BI_DB_PORT') or 25060)
           )
           cursor = conn.cursor()
           
@@ -100,18 +100,18 @@ jobs:
           "
       - name: Run etl_master_catalog.py
         env:
-          DB_HOST: ${{ secrets.BI_DB_HOST }}
-          DB_USER: ${{ secrets.BI_DB_USER }}
-          DB_PASSWORD: ${{ secrets.BI_DB_PASS }}
-          DB_NAME: ${{ secrets.BI_DB_NAME }}
-          DB_PORT: ${{ secrets.BI_DB_PORT }}
+          BI_DB_HOST: ${{ secrets.BI_DB_HOST }}
+          BI_DB_USER: ${{ secrets.BI_DB_USER }}
+          BI_DB_PASS: ${{ secrets.BI_DB_PASS }}
+          BI_DB_NAME: ${{ secrets.BI_DB_NAME }}
+          BI_DB_PORT: ${{ secrets.BI_DB_PORT }}
         run: python etl_master_catalog.py
       
       - name: Run etl_purchase_bi.py
         env:
-          DB_HOST: ${{ secrets.BI_DB_HOST }}
-          DB_USER: ${{ secrets.BI_DB_USER }}
-          DB_PASSWORD: ${{ secrets.BI_DB_PASS }}
-          DB_NAME: ${{ secrets.BI_DB_NAME }}
-          DB_PORT: ${{ secrets.BI_DB_PORT }}
+          BI_DB_HOST: ${{ secrets.BI_DB_HOST }}
+          BI_DB_USER: ${{ secrets.BI_DB_USER }}
+          BI_DB_PASS: ${{ secrets.BI_DB_PASS }}
+          BI_DB_NAME: ${{ secrets.BI_DB_NAME }}
+          BI_DB_PORT: ${{ secrets.BI_DB_PORT }}
         run: python etl_purchase_bi.py   
