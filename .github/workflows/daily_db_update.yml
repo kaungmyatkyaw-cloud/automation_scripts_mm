@@ -98,4 +98,20 @@ jobs:
           conn.close()
           print('ABC Analysis SQL script executed successfully!')
           "
-            
+      - name: Run etl_master_catalog.py
+        env:
+          DB_HOST: ${{ secrets.BI_DB_HOST }}
+          DB_USER: ${{ secrets.BI_DB_USER }}
+          DB_PASSWORD: ${{ secrets.BI_DB_PASS }}
+          DB_NAME: ${{ secrets.BI_DB_NAME }}
+          DB_PORT: ${{ secrets.BI_DB_PORT }}
+        run: python etl_master_catalog.py
+      
+      - name: Run etl_purchase_bi.py
+        env:
+          DB_HOST: ${{ secrets.BI_DB_HOST }}
+          DB_USER: ${{ secrets.BI_DB_USER }}
+          DB_PASSWORD: ${{ secrets.BI_DB_PASS }}
+          DB_NAME: ${{ secrets.BI_DB_NAME }}
+          DB_PORT: ${{ secrets.BI_DB_PORT }}
+        run: python etl_purchase_bi.py   
