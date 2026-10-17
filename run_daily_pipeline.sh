@@ -3,7 +3,7 @@
 # Project directory
 cd /root/k_workspace/projects/automation_scripts_mm
 
-# Virtual Enviroment Python path
+# Virtual Environment Python path
 PYTHON="/root/k_workspace/projects/automation_scripts_mm/venv/bin/python"
 
 echo "=================================================="
@@ -11,7 +11,7 @@ echo "Starting Daily BI Database Pipeline: $(date)"
 echo "=================================================="
 
 # 1. Run Daily FS Sync SQL Script First
-python3 -c "
+$PYTHON -c "
 import os
 import mysql.connector
 from dotenv import load_dotenv
@@ -41,10 +41,10 @@ print('[SUCCESS] Daily FS Sync SQL executed successfully!')
 
 # 2. Run update_products_in_db.py
 echo "Running update_products_in_db.py..."
-python3 update_products_in_db.py
+$PYTHON update_products_in_db.py
 
 # 3. Run ABC Analysis Views SQL Script After
-python3 -c "
+$PYTHON -c "
 import os
 import mysql.connector
 from dotenv import load_dotenv
@@ -74,11 +74,11 @@ print('[SUCCESS] ABC Analysis SQL script executed successfully!')
 
 # 4. Run etl_master_catalog.py
 echo "Running etl_master_catalog.py..."
-python3 etl_master_catalog.py
+$PYTHON etl_master_catalog.py
 
 # 5. Run etl_purchase_bi.py
 echo "Running etl_purchase_bi.py..."
-python3 etl_purchase_bi.py
+$PYTHON etl_purchase_bi.py
 
 echo "=================================================="
 echo "Pipeline completed successfully at $(date)!"
