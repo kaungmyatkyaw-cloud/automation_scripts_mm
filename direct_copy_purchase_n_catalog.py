@@ -1,23 +1,15 @@
-import os
-from dotenv import load_dotenv
 import pandas as pd
 from sqlalchemy import create_engine
 
-load_dotenv()
-
-# Port များ မပါလာပါက default အနေဖြင့် 3306 ကို သုံးရန်
-src_port = os.getenv("SOURCE_DB_PORT") or "3306"
-tgt_port = os.getenv("TARGET_DB_PORT") or "3306"
-
-# Source Database Connection (DigitalOcean)
-SOURCE_DB_URL = f"mysql+pymysql://{os.getenv('SOURCE_DB_USER')}:{os.getenv('SOURCE_DB_PASSWORD')}@{os.getenv('SOURCE_DB_HOST')}:{src_port}/{os.getenv('SOURCE_DB_NAME')}"
+# Source Database Connection (DigitalOcean - ပေးထားသည့် အချက်အလက်များအတိုင်း)
+SOURCE_DB_URL = "mysql+pymysql://kmkyaw:BOs5hA%2BMo6UfmgYweaPJqrmD@db-distribution-accounting-do-user-2718740-0.h.db.ondigitalocean.com:25060/bi_database"
 
 # Target Database Connection (Local marathon-bi)
-TARGET_DB_URL = f"mysql+pymysql://{os.getenv('TARGET_DB_USER')}:{os.getenv('TARGET_DB_PASSWORD')}@{os.getenv('TARGET_DB_HOST')}:{tgt_port}/{os.getenv('TARGET_DB_NAME')}"
+TARGET_DB_URL = "mysql+pymysql://root:MaratonBI!1234@localhost:3306/m_bi"
+
 source_engine = create_engine(SOURCE_DB_URL)
 target_engine = create_engine(TARGET_DB_URL)
 
-# တိုက်ရိုက်ကူးယူမည့် Table များစာရင်း
 tables_to_copy = [
     "bi_master_catalog",
     "bi_daily_purchase_records",
@@ -28,14 +20,12 @@ def direct_copy_tables():
   for table_name in tables_to_copy:
     print(f"Reading '{table_name}' from Source database...")
     try:
-      # Source မှ Data အားလုံးကို Pandas DataFrame ထဲသို့ ဖတ်ခြင်း
       df = pd.read_sql(f"SELECT * FROM {table_name}", con=source_engine)
 
       print(
           f"Writing '{table_name}' to Target database (Replacing existing"
           " data)..."
       )
-      # Target Database သို့ Table တစ်ခုလုံး အစားထိုး (Replace) လုပ်ခြင်း
       df.to_sql(
           table_name,
           con=target_engine,
