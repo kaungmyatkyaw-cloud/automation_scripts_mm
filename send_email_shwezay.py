@@ -523,8 +523,8 @@ try:
             SELECT * 
             FROM fact_saless
             WHERE business_id = '{b_id}'
-              AND sale_datetime >= TIMESTAMP('2026-10-11', '00:00:00')
-              AND sale_datetime <= TIMESTAMP('2026-10-17', '23:59:59');
+              AND sale_datetime >= TIMESTAMP(DATE_SUB(CURDATE(), INTERVAL 7 DAY), '00:00:00')
+              AND sale_datetime <= TIMESTAMP(DATE_SUB(CURDATE(), INTERVAL 1 DAY), '23:59:59');
         """
                 
         branch_df = pd.read_sql(sql_query, connection)  # type: ignore

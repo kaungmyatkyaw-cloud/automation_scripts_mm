@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 # Google Sheets Imports
 import gspread
 from google.oauth2.service_account import Credentials
+import time
 
 # ==========================================
 # 0. INITIAL SETTINGS & ENVIRONMENT SETUP
@@ -158,12 +159,11 @@ def get_mtrading_replenishment_query() -> str:
                 ELSE (p.sales_price - lp.last_purchase_cost) 
             END AS actual_margin_amount,
             
-            -- Actual Margin Percentage
+            -- Actual Margin Percentage (Gross Margin %)
+            -- Safeguarded against NULL costs and zero/negative selling prices
             CASE 
-                WHEN lp.last_purchase_cost IS NULL THEN NULL
-                WHEN p.sales_price > 0 THEN 
-                    ROUND(((p.sales_price - lp.last_purchase_cost) / p.sales_price) * 100, 2)
-                ELSE 0 
+                WHEN p.sales_price IS NULL OR p.sales_price = 0 OR lp.last_purchase_cost IS NULL THEN NULL
+                ELSE ROUND(((p.sales_price - lp.last_purchase_cost) / p.sales_price) * 100, 2)
             END AS actual_margin_percentage
 
         FROM products p
@@ -270,38 +270,48 @@ def update_google_sheet(df: pd.DataFrame, store_display_name: str):
         print(f"⚠️ Service account file not found at {SERVICE_ACCOUNT_FILE}. Skipping Google Sheet update.")
         return
 
-    try:
-        scope = [
-            "https://www.googleapis.com/auth/spreadsheets",
-            "https://www.googleapis.com/auth/drive"
-        ]
-        creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scope)
-        client = gspread.authorize(creds) # type: ignore
-
-        spreadsheet = client.open_by_key(GOOGLE_SHEET_ID)
-
-        # Columns to exclude as per request
-        excluded_cols = ['last_purchase_cost', 'actual_margin_amount', 'actual_margin_percentage', 'weekly_margin_loss']
-        sheet_df = df.drop(columns=[col for col in excluded_cols if col in df.columns], errors='ignore').copy()
-
-        # Convert datetime/date objects to string to prevent JSON serialization errors
-        for col in sheet_df.select_dtypes(include=['object', 'datetime64', 'datetimetz']).columns:
-            sheet_df[col] = sheet_df[col].astype(str).replace(['NaT', 'None', 'nan'], '')
-
-        # Try to select worksheet or create if not exists
+    max_retries = 3
+    for attempt in range(max_retries):
         try:
-            worksheet = spreadsheet.worksheet(store_display_name)
-            worksheet.clear()  # Erase previous week's data
-        except gspread.exceptions.WorksheetNotFound:
-            worksheet = spreadsheet.add_worksheet(title=store_display_name, rows=1000, cols=30)
+            scope = [
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/drive"
+            ]
+            creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scope)
+            client = gspread.authorize(creds) # type: ignore
 
-        # Prepare data for upload
-        data_to_upload = [sheet_df.columns.tolist()] + sheet_df.fillna("").values.tolist()
-        worksheet.update(data_to_upload)
-        print(f"✅ Google Sheet updated successfully for [{store_display_name}]!")
+            spreadsheet = client.open_by_key(GOOGLE_SHEET_ID)
 
-    except Exception as e:
-        print(f"❌ Failed to update Google Sheet for [{store_display_name}]: {str(e)}")
+            # Columns to exclude as per request
+            excluded_cols = ['last_purchase_cost', 'actual_margin_amount', 'actual_margin_percentage', 'weekly_margin_loss']
+            sheet_df = df.drop(columns=[col for col in excluded_cols if col in df.columns], errors='ignore').copy()
+
+            # Convert datetime/date objects to string to prevent JSON serialization errors
+            for col in sheet_df.select_dtypes(include=['object', 'datetime64', 'datetimetz']).columns:
+                sheet_df[col] = sheet_df[col].astype(str).replace(['NaT', 'None', 'nan'], '')
+
+            # Try to select worksheet or create if not exists
+            try:
+                worksheet = spreadsheet.worksheet(store_display_name)
+                worksheet.clear()  # Erase previous week's data
+            except gspread.exceptions.WorksheetNotFound:
+                worksheet = spreadsheet.add_worksheet(title=store_display_name, rows=1000, cols=30)
+
+            # Prepare data for upload
+            data_to_upload = [sheet_df.columns.tolist()] + sheet_df.fillna("").values.tolist()
+            worksheet.update(data_to_upload)
+            print(f"✅ Google Sheet updated successfully for [{store_display_name}]!")
+            return # Success, exit the function
+
+        except Exception as e:
+            if "NameResolutionError" in str(e) or "getaddrinfo failed" in str(e):
+                print(f"⚠️ Network/DNS error on attempt {attempt + 1}/{max_retries} for [{store_display_name}]. Retrying in 3 seconds...")
+                time.sleep(3)
+            else:
+                print(f"❌ Failed to update Google Sheet for [{store_display_name}]: {str(e)}")
+                return
+            
+    print(f"❌ Failed to update Google Sheet for [{store_display_name}] after {max_retries} attempts due to network issues.")
 
 
 # ==========================================
@@ -377,11 +387,6 @@ def send_replenishment_email(
                     {clean_status}
                 </span>
             </td>
-            <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; white-space: nowrap;">
-                <span style="background-color: {alert_bg}; color: {alert_color}; padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">
-                    {alert_status}
-                </span>
-            </td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">{row['sku']}</td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0;">{row['product_name']}</td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right;">{row['total_stock']:,.0f}</td>
@@ -394,6 +399,11 @@ def send_replenishment_email(
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right;">{row['standard_selling_price']:,.0f}</td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right; color: #64748b;">{last_cost}</td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600;">{margin_amt}</td>
+            <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; white-space: nowrap;">
+                <span style="background-color: {alert_bg}; color: {alert_color}; padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">
+                    {alert_status}
+                </span>
+            </td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #16a34a;">{margin_pct}</td>
         </tr>
         """
@@ -514,7 +524,6 @@ def send_replenishment_email(
               <thead>
                 <tr>
                   <th>Status</th>
-                  <th>Alert Status</th>
                   <th>SKU</th>
                   <th>Product Name</th>
                   <th style="text-align: right;">Current Stock</th>
@@ -525,6 +534,7 @@ def send_replenishment_email(
                   <th style="text-align: right;">Selling Price</th>
                   <th style="text-align: right;">Last Cost</th>
                   <th style="text-align: right;">Margin (MMK)</th>
+                  <th>Alert Status</th>
                   <th style="text-align: right;">Margin (%)</th>
                 </tr>
               </thead>
@@ -540,7 +550,8 @@ def send_replenishment_email(
             1. <b>Avg Weekly Sales:</b> <code>Total Sales Qty (Last 28 Days) ÷ 4</code><br/>
             2. <b>Weeks of Supply (WOS):</b> <code>Total Current Stock ÷ Avg Weekly Sales</code><br/>
             3. <b>Recommended Order Qty:</b> <code>MAX(0, (Avg Weekly Sales × 2) - Total Current Stock)</code><br/>
-            4. <b>Estimated Weekly Losses:</b> <code>Weekly Revenue Loss = Avg Sales/Wk × Selling Price</code> | <code>Weekly Margin Loss = Avg Sales/Wk × Margin Amount</code><br/><br/>
+            4. <b>Estimated Weekly Losses:</b> <code>Weekly Revenue Loss = Avg Sales/Wk × Selling Price</code> | <code>Weekly Margin Loss = Avg Sales/Wk × Margin Amount</code><br/>
+            5. <b>Gross Margin %:</b> <code>((Selling Price - Last Cost) / Selling Price) × 100</code><br/><br/>
             <b>📌 Status Rules:</b>
             <ul>
                 <li><span style="color: {COLOR_SHORTAGE}; font-weight: bold;">Shortage:</span> WOS = 0 & Recommended Qty > 0</li>

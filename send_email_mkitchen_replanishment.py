@@ -146,12 +146,11 @@ def get_replenishment_query(business_id: str, branch_id: int) -> str:
                 ELSE (p.sales_price - lp.last_purchase_cost) 
             END AS actual_margin_amount,
             
-            -- Actual Margin Percentage
+            -- Actual Margin Percentage (Gross Margin %)
+            -- Safeguarded against NULL costs and zero/negative selling prices
             CASE 
-                WHEN lp.last_purchase_cost IS NULL THEN NULL
-                WHEN p.sales_price > 0 THEN 
-                    ROUND(((p.sales_price - lp.last_purchase_cost) / p.sales_price) * 100, 2)
-                ELSE 0 
+                WHEN p.sales_price IS NULL OR p.sales_price = 0 OR lp.last_purchase_cost IS NULL THEN NULL
+                ELSE ROUND(((p.sales_price - lp.last_purchase_cost) / p.sales_price) * 100, 2)
             END AS actual_margin_percentage
 
         FROM products p
@@ -192,7 +191,7 @@ def get_replenishment_query(business_id: str, branch_id: int) -> str:
             GROUP BY product_id
         ) sls ON sls.product_id = p.id
 
-        -- Subquery 2: Stock Summary filtered by business_id and branch_id (FIXED: joined via warehouses table)
+        -- Subquery 2: Stock Summary filtered by business_id and branch_id (joined via warehouses table)
         LEFT JOIN (
             SELECT 
                 ss.product_id,
@@ -254,7 +253,6 @@ def get_replenishment_query(business_id: str, branch_id: int) -> str:
 # ==========================================
 # HELPER FUNCTION: UPLOAD TO GOOGLE SHEETS
 # ==========================================
-
 def update_google_sheet(df: pd.DataFrame, store_display_name: str):
     """Updates Google Sheet with 1 sheet per store, excluding cost/margin columns and converting dates to string"""
     if not os.path.exists(SERVICE_ACCOUNT_FILE):
@@ -378,11 +376,6 @@ def send_replenishment_email(
                     {clean_status}
                 </span>
             </td>
-            <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; white-space: nowrap;">
-                <span style="background-color: {alert_bg}; color: {alert_color}; padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">
-                    {alert_status}
-                </span>
-            </td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">{row['sku']}</td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0;">{row['product_name']}</td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right;">{row['total_stock']:,.0f}</td>
@@ -395,6 +388,11 @@ def send_replenishment_email(
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right;">{row['standard_selling_price']:,.0f}</td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right; color: #64748b;">{last_cost}</td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600;">{margin_amt}</td>
+            <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; white-space: nowrap;">
+                <span style="background-color: {alert_bg}; color: {alert_color}; padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">
+                    {alert_status}
+                </span>
+            </td>
             <td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #16a34a;">{margin_pct}</td>
         </tr>
         """
@@ -515,7 +513,6 @@ def send_replenishment_email(
               <thead>
                 <tr>
                   <th>Status</th>
-                  <th>Alert Status</th>
                   <th>SKU</th>
                   <th>Product Name</th>
                   <th style="text-align: right;">Current Stock</th>
@@ -526,6 +523,7 @@ def send_replenishment_email(
                   <th style="text-align: right;">Selling Price</th>
                   <th style="text-align: right;">Last Cost</th>
                   <th style="text-align: right;">Margin (MMK)</th>
+                  <th>Alert Status</th>
                   <th style="text-align: right;">Margin (%)</th>
                 </tr>
               </thead>
@@ -541,7 +539,8 @@ def send_replenishment_email(
             1. <b>Avg Weekly Sales:</b> <code>Total Sales Qty (Last 28 Days) ÷ 4</code><br/>
             2. <b>Weeks of Supply (WOS):</b> <code>Total Current Stock ÷ Avg Weekly Sales</code><br/>
             3. <b>Recommended Order Qty:</b> <code>MAX(0, (Avg Weekly Sales × 2) - Total Current Stock)</code><br/>
-            4. <b>Estimated Weekly Losses:</b> <code>Weekly Revenue Loss = Avg Sales/Wk × Selling Price</code> | <code>Weekly Margin Loss = Avg Sales/Wk × Margin Amount</code><br/><br/>
+            4. <b>Estimated Weekly Losses:</b> <code>Weekly Revenue Loss = Avg Sales/Wk × Selling Price</code> | <code>Weekly Margin Loss = Avg Sales/Wk × Margin Amount</code><br/>
+            5. <b>Gross Margin %:</b> <code>((Selling Price - Last Cost) / Selling Price) × 100</code><br/><br/>
             <b>📌 Status Rules:</b>
             <ul>
                 <li><span style="color: {COLOR_SHORTAGE}; font-weight: bold;">Shortage:</span> WOS = 0 & Recommended Qty > 0</li>
