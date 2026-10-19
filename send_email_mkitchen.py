@@ -547,8 +547,8 @@ LEFT JOIN bi_database.sales_people sp
   WHERE fs.business_id = '84093770-29ad-4e8e-9da1-babe583c0d69'
     AND fs.branch_id = 34
   -- Date Range: past 7 days from 00:00:00 to 23:59:59
-  AND fs.sale_datetime >= TIMESTAMP('2026-10-05', '00:00:00')
-  AND fs.sale_datetime <= TIMESTAMP('2026-10-11', '23:59:59')
+  AND fs.sale_datetime >= TIMESTAMP('2026-10-11', '00:00:00')
+  AND fs.sale_datetime <= TIMESTAMP('2026-10-17', '23:59:59')
   -- Exclude Commercial samples
   AND (cg.parent_group_id != 30 OR cg.id != 30)
   AND (cg.name != 'Commercial samples')

@@ -350,8 +350,8 @@ try:
             OR 
             (business_id = '7ef7c6c0-b59d-4be9-960c-7fa573038642')
         )
-        AND sale_datetime >= TIMESTAMP('2026-10-05', '00:00:00')
-        AND sale_datetime <= TIMESTAMP('2026-10-11', '23:59:59');
+        AND sale_datetime >= TIMESTAMP('2026-10-11', '00:00:00')
+        AND sale_datetime <= TIMESTAMP('2026-10-17', '23:59:59');
     """
     
     df = pd.read_sql(sql_query, connection)  # type: ignore
