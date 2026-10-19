@@ -1,8 +1,19 @@
+import os
+from dotenv import load_dotenv
 import pandas as pd
 from sqlalchemy import create_engine
 
-# Source Database Connection (DigitalOcean - ပေးထားသည့် အချက်အလက်များအတိုင်း)
-SOURCE_DB_URL = "mysql+pymysql://kmkyaw:BOs5hA%2BMo6UfmgYweaPJqrmD@db-distribution-accounting-do-user-2718740-0.h.db.ondigitalocean.com:25060/bi_database"
+# .env ဖိုင်မှ အချက်အလက်များကို ဖတ်ရန်
+load_dotenv()
+
+# Source Database Connection (DigitalOcean - .env ထဲက SRC_DB_... များကို သုံးရန်)
+SRC_HOST = os.getenv("SRC_DB_HOST")
+SRC_USER = os.getenv("SRC_DB_USER")
+SRC_PASSWORD = os.getenv("SRC_DB_PASSWORD")
+SRC_PORT = os.getenv("SRC_DB_PORT") or "3306"
+SRC_NAME = os.getenv("SRC_DB_NAME")
+
+SOURCE_DB_URL = f"mysql+pymysql://{SRC_USER}:{SRC_PASSWORD}@{SRC_HOST}:{SRC_PORT}/{SRC_NAME}"
 
 # Target Database Connection (Local marathon-bi)
 TARGET_DB_URL = "mysql+pymysql://root:MaratonBI!1234@localhost:3306/m_bi"
