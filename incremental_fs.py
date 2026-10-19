@@ -13,7 +13,15 @@ def get_engine(db_key):
     host = os.getenv(f"{db_key}_HOST") or "localhost"
     port = int(os.getenv(f"{db_key}_PORT") or 3306)
     name = os.getenv(f"{db_key}_NAME") or ""
-    return create_engine(f"mysql+pymysql://{user}:{password}@{host}:{port}/{name}")
+    
+    # DigitalOcean ကဲ့သို့ Cloud DB များအတွက် SSL ဖြင့် ချိတ်ဆက်ရန်
+    if db_key == "SRC_DB":
+        return create_engine(
+            f"mysql+pymysql://{user}:{password}@{host}:{port}/{name}",
+            connect_args={"ssl": {"reject_server_certificate": True}}
+        )
+    else:
+        return create_engine(f"mysql+pymysql://{user}:{password}@{host}:{port}/{name}")
 
 def run_incremental_sync():
     print("Connecting to Source and Target databases...")
