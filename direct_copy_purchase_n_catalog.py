@@ -3,15 +3,17 @@ from dotenv import load_dotenv
 import pandas as pd
 from sqlalchemy import create_engine
 
-# .env ဖိုင်မှ ချိတ်ဆက်မှု အချက်အလက်များကို ဖတ်ရန်
 load_dotenv()
 
+# Port များ မပါလာပါက default အနေဖြင့် 3306 ကို သုံးရန်
+src_port = os.getenv("SOURCE_DB_PORT") or "3306"
+tgt_port = os.getenv("TARGET_DB_PORT") or "3306"
+
 # Source Database Connection (DigitalOcean)
-SOURCE_DB_URL = f"mysql+pymysql://{os.getenv('SOURCE_DB_USER')}:{os.getenv('SOURCE_DB_PASSWORD')}@{os.getenv('SOURCE_DB_HOST')}:{os.getenv('SOURCE_DB_PORT')}/{os.getenv('SOURCE_DB_NAME')}"
+SOURCE_DB_URL = f"mysql+pymysql://{os.getenv('SOURCE_DB_USER')}:{os.getenv('SOURCE_DB_PASSWORD')}@{os.getenv('SOURCE_DB_HOST')}:{src_port}/{os.getenv('SOURCE_DB_NAME')}"
 
 # Target Database Connection (Local marathon-bi)
-TARGET_DB_URL = f"mysql+pymysql://{os.getenv('TARGET_DB_USER')}:{os.getenv('TARGET_DB_PASSWORD')}@{os.getenv('TARGET_DB_HOST')}:{os.getenv('TARGET_DB_PORT')}/{os.getenv('TARGET_DB_NAME')}"
-
+TARGET_DB_URL = f"mysql+pymysql://{os.getenv('TARGET_DB_USER')}:{os.getenv('TARGET_DB_PASSWORD')}@{os.getenv('TARGET_DB_HOST')}:{tgt_port}/{os.getenv('TARGET_DB_NAME')}"
 source_engine = create_engine(SOURCE_DB_URL)
 target_engine = create_engine(TARGET_DB_URL)
 
