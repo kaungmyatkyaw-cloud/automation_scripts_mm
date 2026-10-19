@@ -16,11 +16,14 @@ from dotenv import load_dotenv
 # Google Sheets Imports
 import gspread
 from google.oauth2.service_account import Credentials
+import time
 
 # ==========================================
 # 0. INITIAL SETTINGS & ENVIRONMENT SETUP
 # ==========================================
+# Suppress both general pandas warnings and the specific DBAPI2 SQLAlchemy warning
 warnings.filterwarnings("ignore", category=UserWarning, module="pandas")
+warnings.filterwarnings("ignore", category=UserWarning, module="pandas.io.sql")
 load_dotenv()
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -49,10 +52,10 @@ BRANCH_CONFIG = {
 SENDER_EMAIL = os.getenv("SMTP_SENDER_EMAIL", "")
 SENDER_PASSWORD = os.getenv("SMTP_SENDER_PASSWORD", "")
 
-receivers_raw = os.getenv("testing_mail", "")
+receivers_raw = os.getenv("mkitchen_email", "")
 RECEIVER_EMAILS = [email.strip() for email in receivers_raw.split(",") if email.strip()]
 
-cc_receivers_raw = os.getenv("testing_cc", "")
+cc_receivers_raw = os.getenv("cccccc", "")
 CC_EMAILS = [email.strip() for email in cc_receivers_raw.split(",") if email.strip()]
 
 # COLOR PALETTE FOR REPLENISHMENT STATUS
@@ -64,10 +67,10 @@ COLOR_PRIMARY = "#004b87"
 
 
 # ==========================================
-# HELPER FUNCTION: GET MYSQL QUERY FOR BRANCH & BUSINESS (Ignoring Warehouse)
+# HELPER FUNCTION: GET MYSQL QUERY FOR BRANCH & BUSINESS
 # ==========================================
 def get_replenishment_query(business_id: str, branch_id: int) -> str:
-    """Calculates inventory replenishment using Business ID and Branch ID (ignoring warehouse restrictions)"""
+    """Calculates inventory replenishment using Business ID and Branch ID, combining BOTH POS and Invoice sales."""
     return f"""
     SELECT 
         cm.*,
@@ -153,30 +156,53 @@ def get_replenishment_query(business_id: str, branch_id: int) -> str:
 
         FROM products p
         
-        -- Subquery 1: Sales Summary filtered by business_id and branch_id
-        LEFT JOIN (
-            SELECT 
-                posd.product_id,
-                SUM(posd.detail_qty) AS total_sales_qty,
-                SUM(posd.detail_qty) / 4.0 AS avg_weekly_sales
-            FROM pos_checkout_details posd
-            JOIN pos_checkout_invoice_payments posi ON posi.id = posd.pos_checkout_invoice_payment_id
-            WHERE posi.business_id = '{business_id}'
-              AND posi.branch_id = {branch_id}
-              AND posi.created_at >= DATE_SUB(NOW(), INTERVAL 28 DAY)
-            GROUP BY posd.product_id
-        ) sls ON sls.product_id = p.id
-
-        -- Subquery 2: Stock Summary filtered by business_id and branch_id
+        -- Subquery 1: COMBINED Sales Summary (POS + Invoices) filtered by business_id and branch_id
         LEFT JOIN (
             SELECT 
                 product_id,
-                SUM(current_qty) AS total_current_stock,
-                COUNT(DISTINCT batch_number) AS active_batches
-            FROM stock_summaries
-            WHERE business_id = '{business_id}'
-              AND branch_id = {branch_id}
+                SUM(total_sales_qty) AS total_sales_qty,
+                SUM(total_sales_qty) / 4.0 AS avg_weekly_sales
+            FROM (
+                -- 1a. POS Sales
+                SELECT 
+                    posd.product_id,
+                    SUM(posd.detail_qty) AS total_sales_qty
+                FROM pos_checkout_details posd
+                JOIN pos_checkout_invoice_payments posi ON posi.id = posd.pos_checkout_invoice_payment_id
+                WHERE posi.business_id = '{business_id}'
+                  AND posi.branch_id = {branch_id}
+                  AND posi.checkout_date >= DATE_SUB(NOW(), INTERVAL 28 DAY)
+                  AND posi.current_status != 'Void'
+                GROUP BY posd.product_id
+                
+                UNION ALL
+                
+                -- 1b. Standard Invoice Sales
+                SELECT 
+                    sid.product_id,
+                    SUM(sid.detail_qty) AS total_sales_qty
+                FROM sales_invoice_details sid
+                JOIN sales_invoices si ON si.id = sid.sales_invoice_id
+                WHERE si.business_id = '{business_id}'
+                  AND si.branch_id = {branch_id}
+                  AND si.invoice_date >= DATE_SUB(NOW(), INTERVAL 28 DAY)
+                  AND si.current_status NOT IN ('Draft', 'Void')
+                GROUP BY sid.product_id
+            ) AS combined_sales
             GROUP BY product_id
+        ) sls ON sls.product_id = p.id
+
+        -- Subquery 2: Stock Summary filtered by business_id and branch_id (FIXED: joined via warehouses table)
+        LEFT JOIN (
+            SELECT 
+                ss.product_id,
+                SUM(ss.current_qty) AS total_current_stock,
+                COUNT(DISTINCT ss.batch_number) AS active_batches
+            FROM stock_summaries ss
+            INNER JOIN warehouses w ON ss.warehouse_id = w.id AND ss.business_id = w.business_id
+            WHERE ss.business_id = '{business_id}'
+              AND w.branch_id = {branch_id}
+            GROUP BY ss.product_id
         ) stk ON stk.product_id = p.id
 
         -- Subquery 3: Last Purchased Batch & Cost filtered by business_id and branch_id
@@ -228,44 +254,55 @@ def get_replenishment_query(business_id: str, branch_id: int) -> str:
 # ==========================================
 # HELPER FUNCTION: UPLOAD TO GOOGLE SHEETS
 # ==========================================
+
 def update_google_sheet(df: pd.DataFrame, store_display_name: str):
     """Updates Google Sheet with 1 sheet per store, excluding cost/margin columns and converting dates to string"""
     if not os.path.exists(SERVICE_ACCOUNT_FILE):
         print(f"⚠️ Service account file not found at {SERVICE_ACCOUNT_FILE}. Skipping Google Sheet update.")
         return
 
-    try:
-        scope = [
-            "https://www.googleapis.com/auth/spreadsheets",
-            "https://www.googleapis.com/auth/drive"
-        ]
-        creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scope)
-        client = gspread.authorize(creds) # type: ignore
-
-        spreadsheet = client.open_by_key(GOOGLE_SHEET_ID)
-
-        # Columns to exclude as per request
-        excluded_cols = ['last_purchase_cost', 'actual_margin_amount', 'actual_margin_percentage', 'weekly_margin_loss']
-        sheet_df = df.drop(columns=[col for col in excluded_cols if col in df.columns], errors='ignore').copy()
-
-        # Convert datetime/date objects to string to prevent JSON serialization errors
-        for col in sheet_df.select_dtypes(include=['object', 'datetime64', 'datetimetz']).columns:
-            sheet_df[col] = sheet_df[col].astype(str).replace(['NaT', 'None', 'nan'], '')
-
-        # Try to select worksheet or create if not exists
+    max_retries = 3
+    for attempt in range(max_retries):
         try:
-            worksheet = spreadsheet.worksheet(store_display_name)
-            worksheet.clear()  # Erase previous week's data
-        except gspread.exceptions.WorksheetNotFound:
-            worksheet = spreadsheet.add_worksheet(title=store_display_name, rows=1000, cols=30)
+            scope = [
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/drive"
+            ]
+            creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scope)
+            client = gspread.authorize(creds) # type: ignore
 
-        # Prepare data for upload
-        data_to_upload = [sheet_df.columns.tolist()] + sheet_df.fillna("").values.tolist()
-        worksheet.update(data_to_upload)
-        print(f"✅ Google Sheet updated successfully for [{store_display_name}]!")
+            spreadsheet = client.open_by_key(GOOGLE_SHEET_ID)
 
-    except Exception as e:
-        print(f"❌ Failed to update Google Sheet for [{store_display_name}]: {str(e)}")
+            # Columns to exclude as per request
+            excluded_cols = ['last_purchase_cost', 'actual_margin_amount', 'actual_margin_percentage', 'weekly_margin_loss']
+            sheet_df = df.drop(columns=[col for col in excluded_cols if col in df.columns], errors='ignore').copy()
+
+            # Convert datetime/date objects to string to prevent JSON serialization errors
+            for col in sheet_df.select_dtypes(include=['object', 'datetime64', 'datetimetz']).columns:
+                sheet_df[col] = sheet_df[col].astype(str).replace(['NaT', 'None', 'nan'], '')
+
+            # Try to select worksheet or create if not exists
+            try:
+                worksheet = spreadsheet.worksheet(store_display_name)
+                worksheet.clear()  # Erase previous week's data
+            except gspread.exceptions.WorksheetNotFound:
+                worksheet = spreadsheet.add_worksheet(title=store_display_name, rows=1000, cols=30)
+
+            # Prepare data for upload
+            data_to_upload = [sheet_df.columns.tolist()] + sheet_df.fillna("").values.tolist()
+            worksheet.update(data_to_upload)
+            print(f"✅ Google Sheet updated successfully for [{store_display_name}]!")
+            return # Success, exit the function
+
+        except Exception as e:
+            if "NameResolutionError" in str(e) or "getaddrinfo failed" in str(e):
+                print(f"⚠️ Network/DNS error on attempt {attempt + 1}/{max_retries} for [{store_display_name}]. Retrying in 3 seconds...")
+                time.sleep(3)
+            else:
+                print(f"❌ Failed to update Google Sheet for [{store_display_name}]: {str(e)}")
+                return
+            
+    print(f"❌ Failed to update Google Sheet for [{store_display_name}] after {max_retries} attempts due to network issues.")
 
 
 # ==========================================
