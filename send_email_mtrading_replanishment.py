@@ -1,6 +1,7 @@
 import io
 import os
 import smtplib
+import time
 import warnings
 from datetime import datetime
 from email import encoders
@@ -9,14 +10,12 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from typing import Optional
 
+# Google Sheets Imports
+import gspread
 import pandas as pd
 import pymysql
 from dotenv import load_dotenv
-
-# Google Sheets Imports
-import gspread
 from google.oauth2.service_account import Credentials
-import time
 
 # ==========================================
 # 0. INITIAL SETTINGS & ENVIRONMENT SETUP
@@ -41,10 +40,7 @@ SERVICE_ACCOUNT_FILE = os.path.join(CURRENT_DIR, "service_account_update.json")
 # M-Trading Configuration
 # Aggregates data from two business IDs, excluding M-Kitchen (Branch 34) from the first one.
 STORE_CONFIG = {
-    "m_trading": {
-        "display": "M-Trading",
-        "store_code": "m_trading"
-    }
+    "m_trading": {"display": "M-Trading", "store_code": "m_trading"}
 }
 
 # Email Configuration
@@ -52,16 +48,20 @@ SENDER_EMAIL = os.getenv("SMTP_SENDER_EMAIL", "")
 SENDER_PASSWORD = os.getenv("SMTP_SENDER_PASSWORD", "")
 
 receivers_raw = os.getenv("mtrading_email", "")
-RECEIVER_EMAILS = [email.strip() for email in receivers_raw.split(",") if email.strip()]
+RECEIVER_EMAILS = [
+    email.strip() for email in receivers_raw.split(",") if email.strip()
+]
 
 cc_receivers_raw = os.getenv("cccccc", "")
-CC_EMAILS = [email.strip() for email in cc_receivers_raw.split(",") if email.strip()]
+CC_EMAILS = [
+    email.strip() for email in cc_receivers_raw.split(",") if email.strip()
+]
 
 # COLOR PALETTE FOR REPLENISHMENT STATUS
-COLOR_SHORTAGE = "#ef4444"       # Red
-COLOR_URGENT = "#f97316"         # Orange
-COLOR_IDENTIFIED = "#10b981"     # Green
-COLOR_NO_NEED = "#64748b"        # Slate Gray
+COLOR_SHORTAGE = "#ef4444"  # Red
+COLOR_URGENT = "#f97316"  # Orange
+COLOR_IDENTIFIED = "#10b981"  # Green
+COLOR_NO_NEED = "#64748b"  # Slate Gray
 COLOR_PRIMARY = "#004b87"
 
 
@@ -160,7 +160,6 @@ def get_mtrading_replenishment_query() -> str:
             END AS actual_margin_amount,
             
             -- Actual Margin Percentage (Gross Margin %)
-            -- Safeguarded against NULL costs and zero/negative selling prices
             CASE 
                 WHEN p.sales_price IS NULL OR p.sales_price = 0 OR lp.last_purchase_cost IS NULL THEN NULL
                 ELSE ROUND(((p.sales_price - lp.last_purchase_cost) / p.sales_price) * 100, 2)
@@ -262,12 +261,27 @@ def get_mtrading_replenishment_query() -> str:
 
 
 # ==========================================
+# HELPER FUNCTION: GET ALERT STYLING
+# ==========================================
+def get_alert_style(alert_status: str) -> tuple:
+    """Returns background and text color matching the table alert column badges."""
+    if alert_status == "OK":
+        return "#e6f4ea", "#137333"  # Green
+    elif "Orange" in alert_status or "Near Expiry" in alert_status:
+        return "#feefe3", "#b06000"  # Orange
+    else:
+        return "#fce8e6", "#c5221f"  # Red
+
+
+# ==========================================
 # HELPER FUNCTION: UPLOAD TO GOOGLE SHEETS
 # ==========================================
 def update_google_sheet(df: pd.DataFrame, store_display_name: str):
     """Updates Google Sheet with 1 sheet per store, excluding cost/margin columns and converting dates to string"""
     if not os.path.exists(SERVICE_ACCOUNT_FILE):
-        print(f"⚠️ Service account file not found at {SERVICE_ACCOUNT_FILE}. Skipping Google Sheet update.")
+        print(
+            f"⚠️ Service account file not found at {SERVICE_ACCOUNT_FILE}. Skipping Google Sheet update."
+        )
         return
 
     max_retries = 3
@@ -275,110 +289,201 @@ def update_google_sheet(df: pd.DataFrame, store_display_name: str):
         try:
             scope = [
                 "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/drive"
+                "https://www.googleapis.com/auth/drive",
             ]
-            creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scope)
-            client = gspread.authorize(creds) # type: ignore
+            creds = Credentials.from_service_account_file(
+                SERVICE_ACCOUNT_FILE, scopes=scope
+            )
+            client = gspread.authorize(creds)  # type: ignore
 
             spreadsheet = client.open_by_key(GOOGLE_SHEET_ID)
 
             # Columns to exclude as per request
-            excluded_cols = ['last_purchase_cost', 'actual_margin_amount', 'actual_margin_percentage', 'weekly_margin_loss']
-            sheet_df = df.drop(columns=[col for col in excluded_cols if col in df.columns], errors='ignore').copy()
+            excluded_cols = [
+                "last_purchase_cost",
+                "actual_margin_amount",
+                "actual_margin_percentage",
+                "weekly_margin_loss",
+            ]
+            sheet_df = df.drop(
+                columns=[col for col in excluded_cols if col in df.columns],
+                errors="ignore",
+            ).copy()
 
             # Convert datetime/date objects to string to prevent JSON serialization errors
-            for col in sheet_df.select_dtypes(include=['object', 'datetime64', 'datetimetz']).columns:
-                sheet_df[col] = sheet_df[col].astype(str).replace(['NaT', 'None', 'nan'], '')
+            for col in sheet_df.select_dtypes(
+                include=["object", "datetime64", "datetimetz"]
+            ).columns:
+                sheet_df[col] = (
+                    sheet_df[col]
+                    .astype(str)
+                    .replace(["NaT", "None", "nan"], "")
+                )
 
             # Try to select worksheet or create if not exists
             try:
                 worksheet = spreadsheet.worksheet(store_display_name)
                 worksheet.clear()  # Erase previous week's data
             except gspread.exceptions.WorksheetNotFound:
-                worksheet = spreadsheet.add_worksheet(title=store_display_name, rows=1000, cols=30)
+                worksheet = spreadsheet.add_worksheet(
+                    title=store_display_name, rows=1000, cols=30
+                )
 
             # Prepare data for upload
-            data_to_upload = [sheet_df.columns.tolist()] + sheet_df.fillna("").values.tolist()
+            data_to_upload = [
+                sheet_df.columns.tolist()
+            ] + sheet_df.fillna("").values.tolist()
             worksheet.update(data_to_upload)
-            print(f"✅ Google Sheet updated successfully for [{store_display_name}]!")
-            return # Success, exit the function
+            print(
+                f"✅ Google Sheet updated successfully for [{store_display_name}]!"
+            )
+            return  # Success, exit the function
 
         except Exception as e:
-            if "NameResolutionError" in str(e) or "getaddrinfo failed" in str(e):
-                print(f"⚠️ Network/DNS error on attempt {attempt + 1}/{max_retries} for [{store_display_name}]. Retrying in 3 seconds...")
+            if "NameResolutionError" in str(e) or "getaddrinfo failed" in str(
+                e
+            ):
+                print(
+                    f"⚠️ Network/DNS error on attempt {attempt + 1}/{max_retries} for [{store_display_name}]. Retrying in 3 seconds..."
+                )
                 time.sleep(3)
             else:
-                print(f"❌ Failed to update Google Sheet for [{store_display_name}]: {str(e)}")
+                print(
+                    f"❌ Failed to update Google Sheet for [{store_display_name}]: {str(e)}"
+                )
                 return
-            
-    print(f"❌ Failed to update Google Sheet for [{store_display_name}] after {max_retries} attempts due to network issues.")
+
+    print(
+        f"❌ Failed to update Google Sheet for [{store_display_name}] after {max_retries} attempts due to network issues."
+    )
 
 
 # ==========================================
 # HELPER FUNCTION: BUILD & SEND REPLENISHMENT EMAIL
 # ==========================================
 def send_replenishment_email(
-    df: pd.DataFrame, 
-    store_display_name: str, 
+    df: pd.DataFrame,
+    store_display_name: str,
     store_code: str,
     date_str: str,
-    sender: str, 
-    password: str, 
-    receivers: list, 
-    cc_receivers: Optional[list] = None
+    sender: str,
+    password: str,
+    receivers: list,
+    cc_receivers: Optional[list] = None,
 ):
     if df.empty:
-        print(f"⚠️ Replenishment DataFrame for {store_display_name} is empty. Skipping email.")
+        print(
+            f"⚠️ Replenishment DataFrame for {store_display_name} is empty. Skipping email."
+        )
         return
 
     cc_list = cc_receivers if cc_receivers is not None else []
 
     # Filter out "No need" as per requirements
-    needed_df = df[df['stock_status'].str.contains('1. Shortage|2. Urgent need|3. Identified need', case=False, regex=True)].copy()
-
-    # Section 1: Calculate Summary Counts
-    shortage_count = len(df[df['stock_status'].str.contains('Shortage', case=False)])
-    urgent_count = len(df[df['stock_status'].str.contains('Urgent need', case=False)])
-    identified_count = len(df[df['stock_status'].str.contains('Identified need', case=False)])
-
-    total_propositions = len(needed_df)
+    needed_df = df[
+        df["stock_status"].str.contains(
+            "1. Shortage|2. Urgent need|3. Identified need",
+            case=False,
+            regex=True,
+        )
+    ].copy()
 
     # Sort explicitly by weekly_revenue_loss descending as requested
-    needed_df = needed_df.sort_values(by='weekly_revenue_loss', ascending=False)
+    needed_df = needed_df.sort_values(
+        by="weekly_revenue_loss", ascending=False
+    )
 
-    # Build Section 2 Table HTML (Including Estimated Weekly Losses)
+    # ---------------------------------------------------------
+    # SECTION 1: CALCULATIONS & SUMMARIES
+    # ---------------------------------------------------------
+    # 1. Replenishment Status Counts
+    shortage_count = len(
+        df[df["stock_status"].str.contains("Shortage", case=False)]
+    )
+    urgent_count = len(
+        df[df["stock_status"].str.contains("Urgent need", case=False)]
+    )
+    identified_count = len(
+        df[df["stock_status"].str.contains("Identified need", case=False)]
+    )
+    total_propositions = len(needed_df)
+
+    # 2. Masterdata Alert Status Counts (Excluding 'OK') with MATCHING BADGE COLORS
+    alerts_df = df[df["MasterdataAlert"] != "OK"]
+    alert_counts = alerts_df["MasterdataAlert"].value_counts()
+
+    if not alert_counts.empty:
+        alert_summary_items = []
+        for alert_name, count in alert_counts.items():
+            bg_col, text_col = get_alert_style(alert_name)
+            badge_html = (
+                f"<span style='background-color: {bg_col}; color: {text_col}; "
+                f"padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 11px;'>"
+                f"{alert_name}</span>"
+            )
+            alert_summary_items.append(
+                f"<li style='margin-bottom: 6px;'>{badge_html} : <b>{count} SKUs</b></li>"
+            )
+        alert_summary_html = "".join(alert_summary_items)
+    else:
+        ok_bg, ok_text = get_alert_style("OK")
+        alert_summary_html = (
+            f"<li style='margin-bottom: 6px;'>"
+            f"<span style='background-color: {ok_bg}; color: {ok_text}; "
+            f"padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 11px;'>OK</span> "
+            f": <b>All Masterdata OK (0 Alerts)</b></li>"
+        )
+
+    # 3. Total Weekly Revenue Loss Summary
+    loss_skus_df = needed_df[needed_df["weekly_revenue_loss"] > 0]
+    total_loss_skus = len(loss_skus_df)
+    total_loss_amount = needed_df["weekly_revenue_loss"].sum()
+
+    # ---------------------------------------------------------
+    # SECTION 2: TABLE ROWS GENERATION
+    # ---------------------------------------------------------
     table_rows_html = ""
     for idx, row in needed_df.iterrows():
-        status_text = row['stock_status']
-        if 'Shortage' in status_text:
+        status_text = row["stock_status"]
+        if "Shortage" in status_text:
             badge_color = COLOR_SHORTAGE
             clean_status = "Shortage"
-        elif 'Urgent' in status_text:
+        elif "Urgent" in status_text:
             badge_color = COLOR_URGENT
             clean_status = "Urgent need"
         else:
             badge_color = COLOR_IDENTIFIED
             clean_status = "Identified need"
 
-        alert_status = row.get('MasterdataAlert', 'OK')
-        
-        # Alert Badge Color Styling
-        if alert_status == "OK":
-            alert_bg = "#e6f4ea"
-            alert_color = "#137333"
-        elif "Orange" in alert_status or "Near Expiry" in alert_status:
-            alert_bg = "#feefe3"
-            alert_color = "#b06000"
-        else:
-            alert_bg = "#fce8e6"
-            alert_color = "#c5221f"
+        alert_status = row.get("MasterdataAlert", "OK")
+        alert_bg, alert_color = get_alert_style(alert_status)
 
         # Format Values Handling Nulls gracefully
-        last_cost = f"{row['last_purchase_cost']:,.0f}" if pd.notnull(row['last_purchase_cost']) else "N/A"
-        margin_amt = f"{row['actual_margin_amount']:,.0f}" if pd.notnull(row['actual_margin_amount']) else "N/A"
-        margin_pct = f"{row['actual_margin_percentage']:.1f}%" if pd.notnull(row['actual_margin_percentage']) else "N/A"
-        rev_loss = f"{row['weekly_revenue_loss']:,.0f}" if pd.notnull(row['weekly_revenue_loss']) else "0"
-        mgn_loss = f"{row['weekly_margin_loss']:,.0f}" if pd.notnull(row['weekly_margin_loss']) else "0"
+        last_cost = (
+            f"{row['last_purchase_cost']:,.0f}"
+            if pd.notnull(row["last_purchase_cost"])
+            else "N/A"
+        )
+        margin_amt = (
+            f"{row['actual_margin_amount']:,.0f}"
+            if pd.notnull(row["actual_margin_amount"])
+            else "N/A"
+        )
+        margin_pct = (
+            f"{row['actual_margin_percentage']:.1f}%"
+            if pd.notnull(row["actual_margin_percentage"])
+            else "N/A"
+        )
+        rev_loss = (
+            f"{row['weekly_revenue_loss']:,.0f}"
+            if pd.notnull(row["weekly_revenue_loss"])
+            else "0"
+        )
+        mgn_loss = (
+            f"{row['weekly_margin_loss']:,.0f}"
+            if pd.notnull(row["weekly_margin_loss"])
+            else "0"
+        )
 
         table_rows_html += f"""
         <tr>
@@ -452,12 +557,19 @@ def send_replenishment_email(
             border-radius: 6px;
             padding: 16px;
             margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
           }}
-          .summary-item {{
-            display: inline-block;
-            margin-right: 25px;
-            font-size: 14px;
-            font-weight: 600;
+          .summary-box {{
+            flex: 1;
+            min-width: 240px;
+          }}
+          .summary-box-bordered {{
+            flex: 1;
+            min-width: 240px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 20px;
           }}
           .section-title {{
             color: #004b87;
@@ -506,15 +618,44 @@ def send_replenishment_email(
           <!-- SECTION 1: WEEKLY REPLENISHMENT SUMMARY -->
           <div class="section-title">1. Weekly Replenishment Summary</div>
           <div class="summary-card">
-            <div class="summary-item" style="color: {COLOR_SHORTAGE};">
-                🚨 Shortage: <span>{shortage_count} SKUs</span>
+            
+            <!-- Stock Status Breakdown -->
+            <div class="summary-box">
+              <b style="color: #004b87; font-size: 13.5px;">📦 Stock Status Overview</b>
+              <ul style="margin: 8px 0 0 0; padding-left: 18px; font-size: 13px; list-style-type: square;">
+                <li style="color: {COLOR_SHORTAGE}; margin-bottom: 4px;">
+                  🚨 <b>Shortage:</b> <span style="color: #1e293b; font-weight: 600;">{shortage_count} SKUs</span>
+                </li>
+                <li style="color: {COLOR_URGENT}; margin-bottom: 4px;">
+                  ⚠️ <b>Urgent need:</b> <span style="color: #1e293b; font-weight: 600;">{urgent_count} SKUs</span>
+                </li>
+                <li style="color: {COLOR_IDENTIFIED};">
+                  ✅ <b>Identified need:</b> <span style="color: #1e293b; font-weight: 600;">{identified_count} SKUs</span>
+                </li>
+              </ul>
             </div>
-            <div class="summary-item" style="color: {COLOR_URGENT};">
-                ⚠️ Urgent need: <span>{urgent_count} SKUs</span>
+
+            <!-- Total Revenue Loss Summary -->
+            <div class="summary-box-bordered">
+              <b style="color: #004b87; font-size: 13.5px;">💰 Total Weekly Revenue Loss</b>
+              <div style="margin-top: 8px;">
+                <p style="margin: 0; color: #dc2626; font-weight: 800; font-size: 18px;">
+                  MMK {total_loss_amount:,.0f}
+                </p>
+                <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px; font-weight: 600;">
+                  Impacts <b>{total_loss_skus} SKUs</b> needing action
+                </p>
+              </div>
             </div>
-            <div class="summary-item" style="color: {COLOR_IDENTIFIED};">
-                ✅ Identified need: <span>{identified_count} SKUs</span>
+
+            <!-- Alert Status Summary (Matched Colors with Column) -->
+            <div class="summary-box-bordered">
+              <b style="color: #004b87; font-size: 13.5px;">🚨 Alert Status Summary</b>
+              <ul style="margin: 8px 0 0 0; padding-left: 0; font-size: 12.5px; list-style: none;">
+                {alert_summary_html}
+              </ul>
             </div>
+
           </div>
 
           <!-- SECTION 2: DETAILED REPLENISHMENT PROPOSITIONS -->
@@ -564,26 +705,28 @@ def send_replenishment_email(
     </html>
     """
 
-    msg = MIMEMultipart('alternative')
-    msg['From'] = sender
-    msg['To'] = ", ".join(receivers)
+    msg = MIMEMultipart("alternative")
+    msg["From"] = sender
+    msg["To"] = ", ".join(receivers)
     if cc_list:
-        msg['Cc'] = ", ".join(cc_list)
+        msg["Cc"] = ", ".join(cc_list)
 
-    msg['Subject'] = email_subject
-    msg.attach(MIMEText(html_body, 'html'))
+    msg["Subject"] = email_subject
+    msg.attach(MIMEText(html_body, "html"))
 
     # Attach CSV Backup
     csv_file_name = f"replenishment_{store_code}_{date_str}.csv"
     csv_path = os.path.join(CURRENT_DIR, csv_file_name)
-    df.to_csv(csv_path, index=False, encoding='utf-8-sig')
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig")
 
     if os.path.exists(csv_path):
         with open(csv_path, "rb") as attachment:
             part = MIMEBase("application", "octet-stream")
             part.set_payload(attachment.read())
         encoders.encode_base64(part)
-        part.add_header("Content-Disposition", f"attachment; filename={csv_file_name}")
+        part.add_header(
+            "Content-Disposition", f"attachment; filename={csv_file_name}"
+        )
         msg.attach(part)
 
     all_recipients = receivers + cc_list
@@ -599,45 +742,53 @@ def send_replenishment_email(
 # ==========================================
 # MAIN EXECUTION PIPELINE
 # ==========================================
-print("🔄 Starting M-Trading Replenishment Email Pipeline...")
+if __name__ == "__main__":
+    print("🔄 Starting M-Trading Replenishment Email Pipeline...")
 
-try:
-    connection = pymysql.connect(
-        host=DB_HOST, port=DB_PORT, user=DB_USER, password=DB_PASS, database=DB_NAME, charset='utf8mb4'
-    )
-
-    current_date_str = datetime.now().strftime("%Y-%m-%d")
-
-    # Iterate through M-Trading configuration
-    for store_code, store_info in STORE_CONFIG.items():
-        display_name = store_info["display"]
-        
-        print(f"\n🚀 Running Replenishment Pipeline for [{display_name}]...")
-        
-        sql_query = get_mtrading_replenishment_query()
-        store_df = pd.read_sql(sql_query, connection) # type: ignore
-
-        if store_df.empty:
-            print(f"⚠️ No inventory/sales data found for [{display_name}].")
-            continue
-
-        # 1. Send Email and attach CSV
-        send_replenishment_email(
-            df=store_df,
-            store_display_name=display_name,
-            store_code=store_code,
-            date_str=current_date_str,
-            sender=SENDER_EMAIL,
-            password=SENDER_PASSWORD,
-            receivers=RECEIVER_EMAILS,
-            cc_receivers=CC_EMAILS
+    try:
+        connection = pymysql.connect(
+            host=DB_HOST,
+            port=DB_PORT,
+            user=DB_USER,
+            password=DB_PASS,
+            database=DB_NAME,
+            charset="utf8mb4",
         )
 
-        # 2. Update Google Sheet
-        update_google_sheet(store_df, display_name)
+        current_date_str = datetime.now().strftime("%Y-%m-%d")
 
-    connection.close()
-    print("\n🏁 M-Trading Replenishment Email & Google Sheet Update Processed Successfully!")
+        # Iterate through M-Trading configuration
+        for store_code, store_info in STORE_CONFIG.items():
+            display_name = store_info["display"]
 
-except Exception as e:
-    print(f"❌ Critical Pipeline Failure: {repr(e)}")
+            print(f"\n🚀 Running Replenishment Pipeline for [{display_name}]...")
+
+            sql_query = get_mtrading_replenishment_query()
+            store_df = pd.read_sql(sql_query, connection)  # type: ignore
+
+            if store_df.empty:
+                print(f"⚠️ No inventory/sales data found for [{display_name}].")
+                continue
+
+            # 1. Send Email and attach CSV
+            send_replenishment_email(
+                df=store_df,
+                store_display_name=display_name,
+                store_code=store_code,
+                date_str=current_date_str,
+                sender=SENDER_EMAIL,
+                password=SENDER_PASSWORD,
+                receivers=RECEIVER_EMAILS,
+                cc_receivers=CC_EMAILS,
+            )
+
+            # 2. Update Google Sheet
+            update_google_sheet(store_df, display_name)
+
+        connection.close()
+        print(
+            "\n🏁 M-Trading Replenishment Email & Google Sheet Update Processed Successfully!"
+        )
+
+    except Exception as e:
+        print(f"❌ Critical Pipeline Failure: {repr(e)}")
