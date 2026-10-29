@@ -126,7 +126,7 @@ WITH product_sales AS (
     FROM bi_database.fact_saless fs
     WHERE fs.business_id = '84093770-29ad-4e8e-9da1-babe583c0d69'
       AND fs.branch_id = 34
-      AND fs.sale_date >= '2026-01-01'
+      AND fs.sale_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
       AND fs.sale_date <= CURRENT_DATE()
     GROUP BY 
         fs.business_id,
