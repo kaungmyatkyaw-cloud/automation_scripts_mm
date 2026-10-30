@@ -42,14 +42,17 @@ BRANCH_CONFIG = {
     "npt": {
         "b_id": "2d393763-d5c7-42be-b345-84b7be787f10",
         "display": "Shwe Zay NPT",
+        "env_key": "shwezay_npt",
     },
     "ygn": {
         "b_id": "ac4dd67c-738e-4dfe-a475-fc65f2a9ca08",
         "display": "Shwe Zay YGN",
+        "env_key": "shwezay_ygn",
     },
     "kpg": {
         "b_id": "1eb52cc2-7a34-43d8-b646-67cc60402916",
         "display": "Shwe Zay KPG",
+        "env_key": "shwezay_kpg",
     },
 }
 
@@ -57,12 +60,7 @@ BRANCH_CONFIG = {
 SENDER_EMAIL = os.getenv("SMTP_SENDER_EMAIL", "")
 SENDER_PASSWORD = os.getenv("SMTP_SENDER_PASSWORD", "")
 
-receivers_raw = os.getenv("shwezay_email", "")
-RECEIVER_EMAILS = [
-    email.strip() for email in receivers_raw.split(",") if email.strip()
-]
-
-cc_receivers_raw = os.getenv("cccccc", "")
+cc_receivers_raw = os.getenv("testing_cc", "")
 CC_EMAILS = [
     email.strip() for email in cc_receivers_raw.split(",") if email.strip()
 ]
@@ -73,6 +71,26 @@ COLOR_URGENT = "#f97316"  # Orange
 COLOR_IDENTIFIED = "#10b981"  # Green
 COLOR_NO_NEED = "#64748b"  # Slate Gray
 COLOR_PRIMARY = "#004b87"
+
+
+# ==========================================
+# HELPER FUNCTION: GET DYNAMIC RECEIVERS BY REGION
+# ==========================================
+def get_receivers_for_branch(branch_env_key: str) -> list:
+    """Combines common shwezay_email with region-specific email addresses from .env"""
+    common_emails_raw = os.getenv("shwezay_email", "")
+    region_emails_raw = os.getenv(branch_env_key, "")
+
+    common_emails = [
+        email.strip() for email in common_emails_raw.split(",") if email.strip()
+    ]
+    region_emails = [
+        email.strip() for email in region_emails_raw.split(",") if email.strip()
+    ]
+
+    # Combine and remove duplicates while preserving order
+    combined_emails = list(dict.fromkeys(common_emails + region_emails))
+    return combined_emails
 
 
 # ==========================================
@@ -157,8 +175,6 @@ def get_replenishment_query(business_id: str) -> str:
             END AS actual_margin_amount,
             
             -- Actual Margin Percentage (Gross Margin %)
-            -- Formula: ((Selling Price - Cost) / Selling Price) * 100
-            -- Safeguarded against NULL costs and zero/negative selling prices
             CASE 
                 WHEN p.sales_price IS NULL OR p.sales_price = 0 OR lp.last_purchase_cost IS NULL THEN NULL
                 ELSE ROUND(((p.sales_price - lp.last_purchase_cost) / p.sales_price) * 100, 2)
@@ -288,7 +304,7 @@ def update_google_sheet(df: pd.DataFrame, store_display_name: str):
             errors="ignore",
         ).copy()
 
-        # Convert datetime/date objects to string to prevent JSON serialization errors
+        # Convert datetime/date objects to string
         for col in sheet_df.select_dtypes(
             include=["object", "datetime64", "datetimetz"]
         ).columns:
@@ -296,16 +312,15 @@ def update_google_sheet(df: pd.DataFrame, store_display_name: str):
                 sheet_df[col].astype(str).replace(["NaT", "None", "nan"], "")
             )
 
-        # Try to select worksheet or create if not exists
+        # Select worksheet or create if not exists
         try:
             worksheet = spreadsheet.worksheet(store_display_name)
-            worksheet.clear()  # Erase previous week's data
+            worksheet.clear()
         except gspread.exceptions.WorksheetNotFound:
             worksheet = spreadsheet.add_worksheet(
                 title=store_display_name, rows=1000, cols=30
             )
 
-        # Prepare data for upload
         data_to_upload = [
             sheet_df.columns.tolist()
         ] + sheet_df.fillna("").values.tolist()
@@ -341,7 +356,7 @@ def send_replenishment_email(
 
     cc_list = cc_receivers if cc_receivers is not None else []
 
-    # Filter out "No need" as per requirements
+    # Filter out "No need"
     needed_df = df[
         df["stock_status"].str.contains(
             "1. Shortage|2. Urgent need|3. Identified need",
@@ -350,7 +365,7 @@ def send_replenishment_email(
         )
     ].copy()
 
-    # Sort explicitly by weekly_revenue_loss descending as requested
+    # Sort explicitly by weekly_revenue_loss descending
     needed_df = needed_df.sort_values(
         by="weekly_revenue_loss", ascending=False
     )
@@ -358,7 +373,6 @@ def send_replenishment_email(
     # ---------------------------------------------------------
     # SECTION 1: CALCULATIONS & SUMMARIES
     # ---------------------------------------------------------
-    # 1. Replenishment Status Counts
     shortage_count = len(
         df[df["stock_status"].str.contains("Shortage", case=False)]
     )
@@ -370,7 +384,7 @@ def send_replenishment_email(
     )
     total_propositions = len(needed_df)
 
-    # 2. Masterdata Alert Status Counts (Excluding 'OK') with MATCHING BADGE COLORS
+    # Masterdata Alert Status Counts
     alerts_df = df[df["MasterdataAlert"] != "OK"]
     alert_counts = alerts_df["MasterdataAlert"].value_counts()
 
@@ -396,10 +410,18 @@ def send_replenishment_email(
             f": <b>All Masterdata OK (0 Alerts)</b></li>"
         )
 
-    # 3. Total Weekly Revenue Loss Summary
+    # Total Weekly Revenue Loss & Loss Margin % Calculation
     loss_skus_df = needed_df[needed_df["weekly_revenue_loss"] > 0]
     total_loss_skus = len(loss_skus_df)
     total_loss_amount = needed_df["weekly_revenue_loss"].sum()
+    total_margin_loss_amount = needed_df["weekly_margin_loss"].sum()
+
+    # Calculate Total Loss Margin % (Safeguard against division by zero)
+    if total_loss_amount > 0:
+        total_loss_margin_pct = (total_margin_loss_amount / total_loss_amount) * 100
+        margin_pct_str = f"{total_loss_margin_pct:.1f}%"
+    else:
+        margin_pct_str = "0.0%"
 
     # ---------------------------------------------------------
     # SECTION 2: TABLE ROWS GENERATION
@@ -420,7 +442,6 @@ def send_replenishment_email(
         alert_status = row.get("MasterdataAlert", "OK")
         alert_bg, alert_color = get_alert_style(alert_status)
 
-        # Format Values Handling Nulls gracefully
         last_cost = (
             f"{row['last_purchase_cost']:,.0f}"
             if pd.notnull(row["last_purchase_cost"])
@@ -475,7 +496,7 @@ def send_replenishment_email(
         </tr>
         """
 
-    # Subject & Email Title Setup
+    # Email Subject
     email_subject = (
         f"Shwe Zay {store_code.upper()} report - Replenishment - {date_str}"
     )
@@ -599,12 +620,15 @@ def send_replenishment_email(
               </ul>
             </div>
 
-            <!-- Total Revenue Loss Summary -->
+            <!-- Total Revenue Loss Summary (With Total Margin Loss % Added) -->
             <div class="summary-box-bordered">
               <b style="color: #004b87; font-size: 13.5px;">💰 Total Weekly Revenue Loss</b>
               <div style="margin-top: 8px;">
                 <p style="margin: 0; color: #dc2626; font-weight: 800; font-size: 18px;">
                   MMK {total_loss_amount:,.0f}
+                </p>
+                <p style="margin: 4px 0 0 0; color: #d97706; font-weight: 700; font-size: 13px;">
+                  Weekly Margin Loss: MMK {total_margin_loss_amount:,.0f} ({margin_pct_str})
                 </p>
                 <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px; font-weight: 600;">
                   Impacts <b>{total_loss_skus} SKUs</b> needing action
@@ -612,7 +636,7 @@ def send_replenishment_email(
               </div>
             </div>
 
-            <!-- Alert Status Summary (Matched Colors with Column) -->
+            <!-- Alert Status Summary -->
             <div class="summary-box-bordered">
               <b style="color: #004b87; font-size: 13.5px;">🚨 Alert Status Summary</b>
               <ul style="margin: 8px 0 0 0; padding-left: 0; font-size: 12.5px; list-style: none;">
@@ -700,7 +724,7 @@ def send_replenishment_email(
     server.login(sender, password)
     server.sendmail(sender, all_recipients, msg.as_string())
     server.quit()
-    print(f"📧 Replenishment Email sent successfully for [{store_display_name}]!")
+    print(f"📧 Replenishment Email sent successfully for [{store_display_name}] to {receivers}!")
 
 
 # ==========================================
@@ -725,6 +749,10 @@ if __name__ == "__main__":
         for store_code, store_info in BRANCH_CONFIG.items():
             b_id = store_info["b_id"]
             display_name = store_info["display"]
+            env_key = store_info["env_key"]
+
+            # Dynamic Email Receivers Mapping
+            branch_receivers = get_receivers_for_branch(env_key)
 
             print(f"\n🚀 Running Replenishment Pipeline for [{display_name}]...")
 
@@ -735,7 +763,7 @@ if __name__ == "__main__":
                 print(f"⚠️ No inventory/sales data found for [{display_name}].")
                 continue
 
-            # 1. Send Email and attach CSV
+            # 1. Send Email with regional receivers
             send_replenishment_email(
                 df=store_df,
                 store_display_name=display_name,
@@ -743,11 +771,11 @@ if __name__ == "__main__":
                 date_str=current_date_str,
                 sender=SENDER_EMAIL,
                 password=SENDER_PASSWORD,
-                receivers=RECEIVER_EMAILS,
+                receivers=branch_receivers,
                 cc_receivers=CC_EMAILS,
             )
 
-            # 2. Update Google Sheet (1 sheet per store)
+            # 2. Update Google Sheet
             update_google_sheet(store_df, display_name)
 
         connection.close()

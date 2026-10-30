@@ -415,7 +415,7 @@ def send_replenishment_email(
     if not alert_counts.empty:
         alert_summary_items = []
         for alert_name, count in alert_counts.items():
-            bg_col, text_col = get_alert_style(alert_name)
+            bg_col, text_col = get_alert_style(str(alert_name))
             badge_html = (
                 f"<span style='background-color: {bg_col}; color: {text_col}; "
                 f"padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 11px;'>"
@@ -434,10 +434,18 @@ def send_replenishment_email(
             f": <b>All Masterdata OK (0 Alerts)</b></li>"
         )
 
-    # 3. Total Weekly Revenue Loss Summary
+    # 3. Total Weekly Revenue Loss & Loss Margin % Calculation
     loss_skus_df = needed_df[needed_df["weekly_revenue_loss"] > 0]
     total_loss_skus = len(loss_skus_df)
     total_loss_amount = needed_df["weekly_revenue_loss"].sum()
+    total_margin_loss_amount = needed_df["weekly_margin_loss"].sum()
+
+    # Calculate Total Loss Margin % (Safeguard against division by zero)
+    if total_loss_amount > 0:
+        total_loss_margin_pct = (total_margin_loss_amount / total_loss_amount) * 100
+        margin_pct_str = f"{total_loss_margin_pct:.1f}%"
+    else:
+        margin_pct_str = "0.0%"
 
     # ---------------------------------------------------------
     # SECTION 2: TABLE ROWS GENERATION
@@ -635,12 +643,15 @@ def send_replenishment_email(
               </ul>
             </div>
 
-            <!-- Total Revenue Loss Summary -->
+            <!-- Total Revenue Loss Summary (Includes Total Loss Margin %) -->
             <div class="summary-box-bordered">
               <b style="color: #004b87; font-size: 13.5px;">💰 Total Weekly Revenue Loss</b>
               <div style="margin-top: 8px;">
                 <p style="margin: 0; color: #dc2626; font-weight: 800; font-size: 18px;">
                   MMK {total_loss_amount:,.0f}
+                </p>
+                <p style="margin: 4px 0 0 0; color: #d97706; font-weight: 700; font-size: 13px;">
+                  Weekly Margin Loss: MMK {total_margin_loss_amount:,.0f} ({margin_pct_str})
                 </p>
                 <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px; font-weight: 600;">
                   Impacts <b>{total_loss_skus} SKUs</b> needing action
