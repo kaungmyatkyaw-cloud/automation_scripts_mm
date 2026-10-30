@@ -377,7 +377,7 @@ def send_replenishment_email(
     if not alert_counts.empty:
         alert_summary_items = []
         for alert_name, count in alert_counts.items():
-            bg_col, text_col = get_alert_style(alert_name)
+            bg_col, text_col = get_alert_style(str(alert_name))
             badge_html = (
                 f"<span style='background-color: {bg_col}; color: {text_col}; "
                 f"padding: 3px 6px; border-radius: 4px; font-weight: bold; font-size: 11px;'>"
