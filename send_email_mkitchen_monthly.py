@@ -78,7 +78,7 @@ def generate_branch_chart(branch_df: pd.DataFrame) -> io.BytesIO:
     
     bars = ax.barh(branches, revenues, color='#C53030', edgecolor='none')
     
-    ax.set_title('M-Kitchen Revenue by Branch in Millions (Last 7 Days)', fontsize=11, fontweight='bold', pad=12, color='#9B2C2C')
+    ax.set_title('M-Kitchen Revenue by Branch in Millions (Monthly)', fontsize=11, fontweight='bold', pad=12, color='#9B2C2C')
     ax.xaxis.set_major_formatter(FuncFormatter(lambda x, loc: f"{x/1e6:,.1f}M"))
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -354,7 +354,7 @@ def send_summary_report(
                     🏆 Top Sales Champions
                   </td>
                   <td align="right">
-                    <span style="font-size: 12px; color: #C53030; background: #FED7D7; padding: 4px 12px; border-radius: 20px; font-weight: 700;">Last 7 Days</span>
+                    <span style="font-size: 12px; color: #C53030; background: #FED7D7; padding: 4px 12px; border-radius: 20px; font-weight: 700;">Monthly</span>
                   </td>
                 </tr>
               </table>
@@ -388,12 +388,6 @@ def send_summary_report(
           .insight-ul {{ margin: 0; padding-left: 18px; font-size: 13px; color: #4A5568; }}
           .insight-ul li {{ margin-bottom: 4px; }}
           
-          /* Action Required Callout Box */
-          .action-box {{ background-color: #EBF8FF; border: 1px solid #BEE3F8; border-left: 4px solid #3182CE; padding: 16px; margin-top: 25px; margin-bottom: 20px; border-radius: 4px; }}
-          .action-title {{ font-weight: bold; color: #2B6CB0; font-size: 14px; margin-bottom: 8px; display: block; }}
-          .action-ul {{ margin: 0; padding-left: 18px; font-size: 13px; color: #2D3748; }}
-          .action-ul li {{ margin-bottom: 6px; }}
-
           .kpi-table {{ width: 100%; border-collapse: separate; border-spacing: 10px; margin-bottom: 10px; table-layout: fixed; }}
           .kpi-td {{ background: #FFF5F5; border: 1px solid #FED7D7; padding: 14px 16px; border-radius: 6px; vertical-align: top; box-sizing: border-box; }}
           .kpi-title {{ font-size: 11px; color: #742A2A; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 6px; }}
@@ -454,18 +448,6 @@ def send_summary_report(
         </p>
         {html_top_margin_products}
 
-        <!-- 🎯 Action Required / HOD Follow-up Reply Section -->
-        <div class="action-box">
-          <span class="action-title">📌 Action Required: Post-HOD Meeting Updates (9-15-2026)</span>
-          <p style="font-size: 13px; margin: 0 0 8px 0;">Regarding the issues and matters of this report, please share your updates by replying to this email so that we can keep track of progress accordingly, as decided during the <b>9-15-2026 HOD meeting</b>:</p>
-          <ul class="action-ul">
-            <li><b>Action Plans:</b> Action plans to be carried out during the coming week.</li>
-            <li><b>In-Progress Tasks:</b> Issues or tasks that are currently in progress.</li>
-            <li><b>Status Updates:</b> Improvement updates and the status of completed actions.</li>
-          </ul>
-          <p style="font-size: 12px; color: #4A5568; margin-top: 10px; font-style: italic;">* Please reply to all recipients to ensure cross-departmental alignment.</p>
-        </div>
-
         <p style="font-size: 12px; color: #718096; margin-top: 20px;">* Full raw dataset ({len(df):,} rows) is attached as a CSV file below.</p>
       </body>
     </html>
@@ -519,7 +501,7 @@ try:
     # --------------------------------------------------
     # Step 1: MySQL Extraction (M-Kitchen Logic: Branch 34)
     # --------------------------------------------------
-    print("📖 Extracting last 7 days data from MySQL for M-Kitchen...")
+    print("📖 Extracting Monthly data from MySQL for M-Kitchen...")
     connection = pymysql.connect(
         host=DB_HOST, port=DB_PORT, user=DB_USER, password=DB_PASS, database=DB_NAME, charset='utf8mb4'
     )
