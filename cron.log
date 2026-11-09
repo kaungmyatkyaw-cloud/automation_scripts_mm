@@ -1,0 +1,2709 @@
+==================================================
+Starting Daily BI Database Pipeline: Tue Oct 20 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.25s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.36s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 1.00s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.18s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.18s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.18s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.26s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.02s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-20 02:02:53,791 [INFO] Master catalog ETL sync process started...
+2026-10-20 02:02:54,011 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-20 02:02:59,962 [INFO] Master catalog successfully loaded with 21158 records.
+2026-10-20 02:02:59,962 [INFO] Creating business unit catalog views...
+2026-10-20 02:03:00,041 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-20 02:03:00,042 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-20 02:03:00,043 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-20 02:03:00,208 [INFO] ETL sync process started...
+2026-10-20 02:03:00,227 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-20 02:03:02,223 [INFO] Master table successfully loaded with 22821 records.
+2026-10-20 02:03:02,223 [INFO] Creating business unit views...
+2026-10-20 02:03:02,277 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-20 02:03:02,278 [INFO] ETL sync process completed successfully.
+2026-10-20 02:03:02,278 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Tue Oct 20 02:03:02 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Wed Oct 21 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.30s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.27s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.21s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.18s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.04s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-21 02:02:45,474 [INFO] Master catalog ETL sync process started...
+2026-10-21 02:02:45,635 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-21 02:02:51,381 [INFO] Master catalog successfully loaded with 21161 records.
+2026-10-21 02:02:51,381 [INFO] Creating business unit catalog views...
+2026-10-21 02:02:51,430 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-21 02:02:51,431 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-21 02:02:51,431 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-21 02:02:51,593 [INFO] ETL sync process started...
+2026-10-21 02:02:51,614 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-21 02:02:53,783 [INFO] Master table successfully loaded with 22878 records.
+2026-10-21 02:02:53,784 [INFO] Creating business unit views...
+2026-10-21 02:02:53,825 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-21 02:02:53,826 [INFO] ETL sync process completed successfully.
+2026-10-21 02:02:53,826 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Wed Oct 21 02:02:53 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Thu Oct 22 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.27s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.26s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.25s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-22 02:02:47,664 [INFO] Master catalog ETL sync process started...
+2026-10-22 02:02:47,731 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-22 02:02:53,340 [INFO] Master catalog successfully loaded with 21182 records.
+2026-10-22 02:02:53,341 [INFO] Creating business unit catalog views...
+2026-10-22 02:02:53,406 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-22 02:02:53,407 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-22 02:02:53,407 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-22 02:02:53,592 [INFO] ETL sync process started...
+2026-10-22 02:02:53,610 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-22 02:02:55,480 [INFO] Master table successfully loaded with 22905 records.
+2026-10-22 02:02:55,480 [INFO] Creating business unit views...
+2026-10-22 02:02:55,532 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-22 02:02:55,533 [INFO] ETL sync process completed successfully.
+2026-10-22 02:02:55,533 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Thu Oct 22 02:02:55 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Fri Oct 23 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-23 02:02:40,116 [INFO] Master catalog ETL sync process started...
+2026-10-23 02:02:40,134 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-23 02:02:45,711 [INFO] Master catalog successfully loaded with 21197 records.
+2026-10-23 02:02:45,711 [INFO] Creating business unit catalog views...
+2026-10-23 02:02:45,774 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-23 02:02:45,775 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-23 02:02:45,775 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-23 02:02:45,937 [INFO] ETL sync process started...
+2026-10-23 02:02:45,963 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-23 02:02:47,625 [INFO] Master table successfully loaded with 23001 records.
+2026-10-23 02:02:47,625 [INFO] Creating business unit views...
+2026-10-23 02:02:47,664 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-23 02:02:47,665 [INFO] ETL sync process completed successfully.
+2026-10-23 02:02:47,665 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Fri Oct 23 02:02:47 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Sat Oct 24 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.21s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.20s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.31s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.18s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.28s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.25s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-24 02:02:38,678 [INFO] Master catalog ETL sync process started...
+2026-10-24 02:02:38,694 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-24 02:02:43,251 [INFO] Master catalog successfully loaded with 21213 records.
+2026-10-24 02:02:43,251 [INFO] Creating business unit catalog views...
+2026-10-24 02:02:43,317 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-24 02:02:43,319 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-24 02:02:43,319 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-24 02:02:43,487 [INFO] ETL sync process started...
+2026-10-24 02:02:43,503 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-24 02:02:45,529 [INFO] Master table successfully loaded with 23134 records.
+2026-10-24 02:02:45,529 [INFO] Creating business unit views...
+2026-10-24 02:02:45,580 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-24 02:02:45,581 [INFO] ETL sync process completed successfully.
+2026-10-24 02:02:45,582 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Sat Oct 24 02:02:45 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Sun Oct 25 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.04s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-25 02:02:38,942 [INFO] Master catalog ETL sync process started...
+2026-10-25 02:02:38,956 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-25 02:02:43,521 [INFO] Master catalog successfully loaded with 21223 records.
+2026-10-25 02:02:43,521 [INFO] Creating business unit catalog views...
+2026-10-25 02:02:43,581 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-25 02:02:43,582 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-25 02:02:43,582 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-25 02:02:43,756 [INFO] ETL sync process started...
+2026-10-25 02:02:43,767 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-25 02:02:45,413 [INFO] Master table successfully loaded with 23201 records.
+2026-10-25 02:02:45,413 [INFO] Creating business unit views...
+2026-10-25 02:02:45,443 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-25 02:02:45,444 [INFO] ETL sync process completed successfully.
+2026-10-25 02:02:45,444 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Sun Oct 25 02:02:45 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Mon Oct 26 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.33s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.24s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.27s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 1.04s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.04s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-26 02:02:42,977 [INFO] Master catalog ETL sync process started...
+2026-10-26 02:02:42,994 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-26 02:02:48,404 [INFO] Master catalog successfully loaded with 21225 records.
+2026-10-26 02:02:48,405 [INFO] Creating business unit catalog views...
+2026-10-26 02:02:48,469 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-26 02:02:48,470 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-26 02:02:48,471 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-26 02:02:48,667 [INFO] ETL sync process started...
+2026-10-26 02:02:48,685 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-26 02:02:50,326 [INFO] Master table successfully loaded with 23229 records.
+2026-10-26 02:02:50,326 [INFO] Creating business unit views...
+2026-10-26 02:02:50,361 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-26 02:02:50,362 [INFO] ETL sync process completed successfully.
+2026-10-26 02:02:50,363 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Mon Oct 26 02:02:50 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Tue Oct 27 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.18s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.88s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.18s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-27 02:02:48,419 [INFO] Master catalog ETL sync process started...
+2026-10-27 02:02:48,437 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-27 02:02:54,643 [INFO] Master catalog successfully loaded with 21225 records.
+2026-10-27 02:02:54,643 [INFO] Creating business unit catalog views...
+2026-10-27 02:02:54,707 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-27 02:02:54,708 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-27 02:02:54,708 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-27 02:02:54,875 [INFO] ETL sync process started...
+2026-10-27 02:02:54,893 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-27 02:02:57,432 [INFO] Master table successfully loaded with 23229 records.
+2026-10-27 02:02:57,432 [INFO] Creating business unit views...
+2026-10-27 02:02:57,481 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-27 02:02:57,484 [INFO] ETL sync process completed successfully.
+2026-10-27 02:02:57,484 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Tue Oct 27 02:02:57 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Wed Oct 28 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.03s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-28 02:02:46,296 [INFO] Master catalog ETL sync process started...
+2026-10-28 02:02:46,677 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-28 02:02:51,608 [INFO] Master catalog successfully loaded with 21296 records.
+2026-10-28 02:02:51,609 [INFO] Creating business unit catalog views...
+2026-10-28 02:02:51,665 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-28 02:02:51,666 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-28 02:02:51,666 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-28 02:02:51,830 [INFO] ETL sync process started...
+2026-10-28 02:02:51,846 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-28 02:02:53,550 [INFO] Master table successfully loaded with 23351 records.
+2026-10-28 02:02:53,550 [INFO] Creating business unit views...
+2026-10-28 02:02:53,591 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-28 02:02:53,592 [INFO] ETL sync process completed successfully.
+2026-10-28 02:02:53,593 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Wed Oct 28 02:02:53 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Thu Oct 29 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.65s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.27s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.28s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.04s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.02s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-29 02:02:43,606 [INFO] Master catalog ETL sync process started...
+2026-10-29 02:02:43,624 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-29 02:02:50,602 [INFO] Master catalog successfully loaded with 21305 records.
+2026-10-29 02:02:50,602 [INFO] Creating business unit catalog views...
+2026-10-29 02:02:50,663 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-29 02:02:50,664 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-29 02:02:50,664 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-29 02:02:50,826 [INFO] ETL sync process started...
+2026-10-29 02:02:50,842 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-29 02:02:52,814 [INFO] Master table successfully loaded with 23430 records.
+2026-10-29 02:02:52,814 [INFO] Creating business unit views...
+2026-10-29 02:02:52,899 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-29 02:02:52,900 [INFO] ETL sync process completed successfully.
+2026-10-29 02:02:52,901 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Thu Oct 29 02:02:52 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Fri Oct 30 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.29s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.20s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-30 02:02:57,221 [INFO] Master catalog ETL sync process started...
+2026-10-30 02:02:57,269 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-30 02:03:07,393 [INFO] Master catalog successfully loaded with 21321 records.
+2026-10-30 02:03:07,393 [INFO] Creating business unit catalog views...
+2026-10-30 02:03:07,457 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-30 02:03:07,458 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-30 02:03:07,458 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-30 02:03:07,628 [INFO] ETL sync process started...
+2026-10-30 02:03:07,643 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-30 02:03:09,479 [INFO] Master table successfully loaded with 23472 records.
+2026-10-30 02:03:09,479 [INFO] Creating business unit views...
+2026-10-30 02:03:09,519 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-30 02:03:09,520 [INFO] ETL sync process completed successfully.
+2026-10-30 02:03:09,521 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Fri Oct 30 02:03:09 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Sat Oct 31 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.34s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.21s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-10-31 02:02:50,926 [INFO] Master catalog ETL sync process started...
+2026-10-31 02:02:50,987 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-10-31 02:02:57,585 [INFO] Master catalog successfully loaded with 21387 records.
+2026-10-31 02:02:57,585 [INFO] Creating business unit catalog views...
+2026-10-31 02:02:57,630 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-10-31 02:02:57,631 [INFO] Master catalog ETL sync process completed successfully.
+2026-10-31 02:02:57,632 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-10-31 02:02:57,799 [INFO] ETL sync process started...
+2026-10-31 02:02:57,812 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-10-31 02:02:59,610 [INFO] Master table successfully loaded with 23631 records.
+2026-10-31 02:02:59,610 [INFO] Creating business unit views...
+2026-10-31 02:02:59,661 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-10-31 02:02:59,662 [INFO] ETL sync process completed successfully.
+2026-10-31 02:02:59,662 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Sat Oct 31 02:02:59 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Sun Nov  1 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.21s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-11-01 02:02:39,740 [INFO] Master catalog ETL sync process started...
+2026-11-01 02:02:39,993 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-11-01 02:02:45,201 [INFO] Master catalog successfully loaded with 21401 records.
+2026-11-01 02:02:45,201 [INFO] Creating business unit catalog views...
+2026-11-01 02:02:45,316 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-11-01 02:02:45,317 [INFO] Master catalog ETL sync process completed successfully.
+2026-11-01 02:02:45,317 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-11-01 02:02:45,478 [INFO] ETL sync process started...
+2026-11-01 02:02:45,508 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-11-01 02:02:47,356 [INFO] Master table successfully loaded with 23758 records.
+2026-11-01 02:02:47,357 [INFO] Creating business unit views...
+2026-11-01 02:02:47,396 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-11-01 02:02:47,397 [INFO] ETL sync process completed successfully.
+2026-11-01 02:02:47,398 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Sun Nov  1 02:02:47 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Mon Nov  2 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.22s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.22s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.02s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-11-02 02:02:43,532 [INFO] Master catalog ETL sync process started...
+2026-11-02 02:02:43,613 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-11-02 02:02:48,926 [INFO] Master catalog successfully loaded with 21416 records.
+2026-11-02 02:02:48,926 [INFO] Creating business unit catalog views...
+2026-11-02 02:02:48,973 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-11-02 02:02:48,974 [INFO] Master catalog ETL sync process completed successfully.
+2026-11-02 02:02:48,974 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-11-02 02:02:49,210 [INFO] ETL sync process started...
+2026-11-02 02:02:49,225 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-11-02 02:02:50,965 [INFO] Master table successfully loaded with 23855 records.
+2026-11-02 02:02:50,965 [INFO] Creating business unit views...
+2026-11-02 02:02:51,009 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-11-02 02:02:51,010 [INFO] ETL sync process completed successfully.
+2026-11-02 02:02:51,010 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Mon Nov  2 02:02:51 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Tue Nov  3 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.27s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.22s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-11-03 02:03:02,070 [INFO] Master catalog ETL sync process started...
+2026-11-03 02:03:02,122 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-11-03 02:03:11,054 [INFO] Master catalog successfully loaded with 21434 records.
+2026-11-03 02:03:11,054 [INFO] Creating business unit catalog views...
+2026-11-03 02:03:11,151 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-11-03 02:03:11,152 [INFO] Master catalog ETL sync process completed successfully.
+2026-11-03 02:03:11,153 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-11-03 02:03:11,316 [INFO] ETL sync process started...
+2026-11-03 02:03:11,331 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-11-03 02:03:13,095 [INFO] Master table successfully loaded with 23916 records.
+2026-11-03 02:03:13,095 [INFO] Creating business unit views...
+2026-11-03 02:03:13,146 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-11-03 02:03:13,147 [INFO] ETL sync process completed successfully.
+2026-11-03 02:03:13,147 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Tue Nov  3 02:03:13 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Wed Nov  4 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.52s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.42s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.22s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.24s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.27s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.21s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.26s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.04s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-11-04 02:02:57,392 [INFO] Master catalog ETL sync process started...
+2026-11-04 02:02:57,500 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-11-04 02:03:07,273 [INFO] Master catalog successfully loaded with 21456 records.
+2026-11-04 02:03:07,273 [INFO] Creating business unit catalog views...
+2026-11-04 02:03:07,385 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-11-04 02:03:07,386 [INFO] Master catalog ETL sync process completed successfully.
+2026-11-04 02:03:07,386 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-11-04 02:03:07,564 [INFO] ETL sync process started...
+2026-11-04 02:03:07,583 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-11-04 02:03:09,689 [INFO] Master table successfully loaded with 23991 records.
+2026-11-04 02:03:09,689 [INFO] Creating business unit views...
+2026-11-04 02:03:09,766 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-11-04 02:03:09,767 [INFO] ETL sync process completed successfully.
+2026-11-04 02:03:09,767 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Wed Nov  4 02:03:09 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Thu Nov  5 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.36s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.90s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.22s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.18s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.20s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-11-05 02:03:03,950 [INFO] Master catalog ETL sync process started...
+2026-11-05 02:03:04,151 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-11-05 02:03:12,035 [INFO] Master catalog successfully loaded with 21457 records.
+2026-11-05 02:03:12,035 [INFO] Creating business unit catalog views...
+2026-11-05 02:03:12,101 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-11-05 02:03:12,101 [INFO] Master catalog ETL sync process completed successfully.
+2026-11-05 02:03:12,102 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-11-05 02:03:12,268 [INFO] ETL sync process started...
+2026-11-05 02:03:12,282 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-11-05 02:03:14,170 [INFO] Master table successfully loaded with 24115 records.
+2026-11-05 02:03:14,170 [INFO] Creating business unit views...
+2026-11-05 02:03:14,218 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-11-05 02:03:14,219 [INFO] ETL sync process completed successfully.
+2026-11-05 02:03:14,219 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Thu Nov  5 02:03:14 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Fri Nov  6 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-11-06 02:03:06,420 [INFO] Master catalog ETL sync process started...
+2026-11-06 02:03:06,450 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-11-06 02:03:12,415 [INFO] Master catalog successfully loaded with 21480 records.
+2026-11-06 02:03:12,415 [INFO] Creating business unit catalog views...
+2026-11-06 02:03:12,472 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-11-06 02:03:12,473 [INFO] Master catalog ETL sync process completed successfully.
+2026-11-06 02:03:12,473 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-11-06 02:03:12,729 [INFO] ETL sync process started...
+2026-11-06 02:03:12,746 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-11-06 02:03:14,488 [INFO] Master table successfully loaded with 24223 records.
+2026-11-06 02:03:14,488 [INFO] Creating business unit views...
+2026-11-06 02:03:14,532 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-11-06 02:03:14,533 [INFO] ETL sync process completed successfully.
+2026-11-06 02:03:14,533 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Fri Nov  6 02:03:14 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Sat Nov  7 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.18s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.02s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-11-07 02:02:59,607 [INFO] Master catalog ETL sync process started...
+2026-11-07 02:02:59,641 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-11-07 02:03:08,085 [INFO] Master catalog successfully loaded with 21538 records.
+2026-11-07 02:03:08,085 [INFO] Creating business unit catalog views...
+2026-11-07 02:03:08,147 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-11-07 02:03:08,148 [INFO] Master catalog ETL sync process completed successfully.
+2026-11-07 02:03:08,148 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-11-07 02:03:08,302 [INFO] ETL sync process started...
+2026-11-07 02:03:08,322 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-11-07 02:03:10,433 [INFO] Master table successfully loaded with 24382 records.
+2026-11-07 02:03:10,433 [INFO] Creating business unit views...
+2026-11-07 02:03:10,485 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-11-07 02:03:10,486 [INFO] ETL sync process completed successfully.
+2026-11-07 02:03:10,487 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Sat Nov  7 02:03:10 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Sun Nov  8 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.03s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.67s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.28s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.34s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.22s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.23s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.36s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.15s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.02s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.03s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.01s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-11-08 02:03:01,435 [INFO] Master catalog ETL sync process started...
+2026-11-08 02:03:01,734 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-11-08 02:03:10,863 [INFO] Master catalog successfully loaded with 21545 records.
+2026-11-08 02:03:10,863 [INFO] Creating business unit catalog views...
+2026-11-08 02:03:10,937 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-11-08 02:03:10,938 [INFO] Master catalog ETL sync process completed successfully.
+2026-11-08 02:03:10,938 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-11-08 02:03:11,100 [INFO] ETL sync process started...
+2026-11-08 02:03:11,116 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-11-08 02:03:13,186 [INFO] Master table successfully loaded with 24510 records.
+2026-11-08 02:03:13,187 [INFO] Creating business unit views...
+2026-11-08 02:03:13,227 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-11-08 02:03:13,228 [INFO] ETL sync process completed successfully.
+2026-11-08 02:03:13,228 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Sun Nov  8 02:03:13 UTC 2026!
+==================================================
+==================================================
+Starting Daily BI Database Pipeline: Mon Nov  9 02:00:01 UTC 2026
+==================================================
+[SUCCESS] Daily FS Sync SQL executed successfully!
+Running update_products_in_db.py...
+Starting batch update from ID 1 to 500000 (Chunk Size: 5000)...
+[Success] Chunk (1 to 5000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (5001 to 10000) processed in 0.05s | Rows Updated: 0
+[Success] Chunk (10001 to 15000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (15001 to 20000) processed in 0.02s | Rows Updated: 0
+[Success] Chunk (20001 to 25000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (25001 to 30000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (30001 to 35000) processed in 0.55s | Rows Updated: 0
+[Success] Chunk (35001 to 40000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (40001 to 45000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (45001 to 50000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (50001 to 55000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (55001 to 60000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (60001 to 65000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (65001 to 70000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (70001 to 75000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (75001 to 80000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (80001 to 85000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (85001 to 90000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (90001 to 95000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (95001 to 100000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (100001 to 105000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (105001 to 110000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (110001 to 115000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (115001 to 120000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (120001 to 125000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (125001 to 130000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (130001 to 135000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (135001 to 140000) processed in 0.08s | Rows Updated: 0
+[Success] Chunk (140001 to 145000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (145001 to 150000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (150001 to 155000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (155001 to 160000) processed in 0.19s | Rows Updated: 0
+[Success] Chunk (160001 to 165000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (165001 to 170000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (170001 to 175000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (175001 to 180000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (180001 to 185000) processed in 0.06s | Rows Updated: 0
+[Success] Chunk (185001 to 190000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (190001 to 195000) processed in 0.13s | Rows Updated: 0
+[Success] Chunk (195001 to 200000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (200001 to 205000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (205001 to 210000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (210001 to 215000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (215001 to 220000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (220001 to 225000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (225001 to 230000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (230001 to 235000) processed in 0.17s | Rows Updated: 0
+[Success] Chunk (235001 to 240000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (240001 to 245000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (245001 to 250000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (250001 to 255000) processed in 0.28s | Rows Updated: 0
+[Success] Chunk (255001 to 260000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (260001 to 265000) processed in 0.16s | Rows Updated: 0
+[Success] Chunk (265001 to 270000) processed in 0.07s | Rows Updated: 0
+[Success] Chunk (270001 to 275000) processed in 0.11s | Rows Updated: 0
+[Success] Chunk (275001 to 280000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (280001 to 285000) processed in 0.10s | Rows Updated: 0
+[Success] Chunk (285001 to 290000) processed in 0.14s | Rows Updated: 0
+[Success] Chunk (290001 to 295000) processed in 0.09s | Rows Updated: 0
+[Success] Chunk (295001 to 300000) processed in 0.12s | Rows Updated: 0
+[Success] Chunk (300001 to 305000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (305001 to 310000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (310001 to 315000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (315001 to 320000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (320001 to 325000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (325001 to 330000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (330001 to 335000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (335001 to 340000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (340001 to 345000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (345001 to 350000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (350001 to 355000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (355001 to 360000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (360001 to 365000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (365001 to 370000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (370001 to 375000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (375001 to 380000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (380001 to 385000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (385001 to 390000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (390001 to 395000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (395001 to 400000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (400001 to 405000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (405001 to 410000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (410001 to 415000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (415001 to 420000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (420001 to 425000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (425001 to 430000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (430001 to 435000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (435001 to 440000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (440001 to 445000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (445001 to 450000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (450001 to 455000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (455001 to 460000) processed in 0.01s | Rows Updated: 0
+[Success] Chunk (460001 to 465000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (465001 to 470000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (470001 to 475000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (475001 to 480000) processed in 0.02s | Rows Updated: 0
+[Success] Chunk (480001 to 485000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (485001 to 490000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (490001 to 495000) processed in 0.00s | Rows Updated: 0
+[Success] Chunk (495001 to 500000) processed in 0.00s | Rows Updated: 0
+
+All batch updates completed successfully!
+Database connection closed.
+[SUCCESS] ABC Analysis SQL script executed successfully!
+Running etl_master_catalog.py...
+2026-11-09 02:03:06,892 [INFO] Master catalog ETL sync process started...
+2026-11-09 02:03:06,927 [INFO] Table `bi_master_catalog` successfully truncated.
+2026-11-09 02:03:15,920 [INFO] Master catalog successfully loaded with 21566 records.
+2026-11-09 02:03:15,920 [INFO] Creating business unit catalog views...
+2026-11-09 02:03:15,998 [INFO] Catalog views successfully created (`vw_bi_catalog_m_kitchen`, `vw_bi_catalog_m_trading`, `vw_bi_catalog_shwezay`).
+2026-11-09 02:03:15,999 [INFO] Master catalog ETL sync process completed successfully.
+2026-11-09 02:03:15,999 [INFO] Database connection closed.
+Running etl_purchase_bi.py...
+2026-11-09 02:03:16,235 [INFO] ETL sync process started...
+2026-11-09 02:03:16,255 [INFO] Table `bi_daily_purchase_records` successfully truncated.
+2026-11-09 02:03:18,842 [INFO] Master table successfully loaded with 24555 records.
+2026-11-09 02:03:18,842 [INFO] Creating business unit views...
+2026-11-09 02:03:18,892 [INFO] Views successfully created (`vw_bi_purchase_m_kitchen`, `vw_bi_purchase_m_trading`, `vw_bi_purchase_shwezay`).
+2026-11-09 02:03:18,893 [INFO] ETL sync process completed successfully.
+2026-11-09 02:03:18,893 [INFO] Database connection closed.
+==================================================
+Pipeline completed successfully at Mon Nov  9 02:03:18 UTC 2026!
+==================================================

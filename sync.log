@@ -1,0 +1,206 @@
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-18
+Found 2215 rows to sync from Source based on date.
+Synced 2215 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 259624 | Target Total IDs: 259620
+Missing IDs found in Target: 4
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-20
+Found 968 rows to sync from Source based on date.
+Synced 968 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 260679 | Target Total IDs: 260570
+Missing IDs found in Target: 109
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-21
+Found 1002 rows to sync from Source based on date.
+Synced 1002 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 261719 | Target Total IDs: 261628
+Missing IDs found in Target: 91
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-22
+Found 1145 rows to sync from Source based on date.
+Synced 1145 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 262891 | Target Total IDs: 262857
+Missing IDs found in Target: 34
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-23
+Found 1224 rows to sync from Source based on date.
+Synced 1224 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 264230 | Target Total IDs: 264091
+Missing IDs found in Target: 139
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-24
+Found 1178 rows to sync from Source based on date.
+Synced 1178 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 265432 | Target Total IDs: 265394
+Missing IDs found in Target: 38
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-25
+Found 1207 rows to sync from Source based on date.
+Synced 1207 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 266609 | Target Total IDs: 266609
+Missing IDs found in Target: 0
+Target is 100% in sync with Source. No missing records.
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-26
+Found 1449 rows to sync from Source based on date.
+Synced 1449 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 268035 | Target Total IDs: 268035
+Missing IDs found in Target: 0
+Target is 100% in sync with Source. No missing records.
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-27
+Found 1170 rows to sync from Source based on date.
+Synced 1170 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 269189 | Target Total IDs: 269189
+Missing IDs found in Target: 0
+Target is 100% in sync with Source. No missing records.
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-28
+Found 1332 rows to sync from Source based on date.
+Synced 1332 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 270548 | Target Total IDs: 270509
+Missing IDs found in Target: 39
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-29
+Found 1200 rows to sync from Source based on date.
+Synced 1200 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 271782 | Target Total IDs: 271735
+Missing IDs found in Target: 47
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-30
+Found 1278 rows to sync from Source based on date.
+Synced 1278 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 273092 | Target Total IDs: 273036
+Missing IDs found in Target: 56
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-10-31
+Found 1133 rows to sync from Source based on date.
+Synced 1133 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 274217 | Target Total IDs: 274179
+Missing IDs found in Target: 38
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-01
+Found 1098 rows to sync from Source based on date.
+Synced 1098 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 275344 | Target Total IDs: 275308
+Missing IDs found in Target: 36
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-02
+Found 1034 rows to sync from Source based on date.
+Synced 1034 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 276397 | Target Total IDs: 276352
+Missing IDs found in Target: 45
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-03
+Found 996 rows to sync from Source based on date.
+Synced 996 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 277403 | Target Total IDs: 277356
+Missing IDs found in Target: 47
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-04
+Found 802 rows to sync from Source based on date.
+Synced 802 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 278205 | Target Total IDs: 278181
+Missing IDs found in Target: 24
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-05
+Found 1022 rows to sync from Source based on date.
+Synced 1022 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 279323 | Target Total IDs: 279205
+Missing IDs found in Target: 118
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-06
+Found 976 rows to sync from Source based on date.
+Synced 976 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 280298 | Target Total IDs: 280274
+Missing IDs found in Target: 24
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-07
+Found 1149 rows to sync from Source based on date.
+Synced 1149 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 281721 | Target Total IDs: 281426
+Missing IDs found in Target: 16585
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-08
+Found 993 rows to sync from Source based on date.
+Synced 993 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 282706 | Target Total IDs: 298988
+Missing IDs found in Target: 0
+Target is 100% in sync with Source. No missing records.
+Incremental sync and reconciliation completed successfully!
