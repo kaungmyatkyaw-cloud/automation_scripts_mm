@@ -60,7 +60,7 @@ BRANCH_CONFIG = {
 SENDER_EMAIL = os.getenv("SMTP_SENDER_EMAIL", "")
 SENDER_PASSWORD = os.getenv("SMTP_SENDER_PASSWORD", "")
 
-cc_receivers_raw = os.getenv("testing_cc", "")
+cc_receivers_raw = os.getenv("cccccc", "")
 CC_EMAILS = [
     email.strip() for email in cc_receivers_raw.split(",") if email.strip()
 ]
