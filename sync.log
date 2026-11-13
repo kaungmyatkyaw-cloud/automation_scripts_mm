@@ -204,3 +204,41 @@ Reconciliation Status -> Source Total IDs: 282706 | Target Total IDs: 298988
 Missing IDs found in Target: 0
 Target is 100% in sync with Source. No missing records.
 Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-09
+Found 969 rows to sync from Source based on date.
+Synced 969 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 283858 | Target Total IDs: 299906
+Missing IDs found in Target: 42
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-10
+Found 952 rows to sync from Source based on date.
+Synced 952 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 284875 | Target Total IDs: 300843
+Missing IDs found in Target: 0
+Target is 100% in sync with Source. No missing records.
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-11
+Found 1039 rows to sync from Source based on date.
+Synced 1039 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 286145 | Target Total IDs: 301816
+Missing IDs found in Target: 0
+Target is 100% in sync with Source. No missing records.
+Incremental sync and reconciliation completed successfully!
+Connecting to Source and Target databases...
+Last synced date in Target: 2026-11-12
+Found 944 rows to sync from Source based on date.
+Synced 944 date-incremental rows successfully.
+Performing reconciliation check between Source and Target IDs...
+Reconciliation Status -> Source Total IDs: 287207 | Target Total IDs: 302693
+Missing IDs found in Target: 9
+Fetching and syncing missing IDs...
+All missing IDs successfully synchronized!
+Incremental sync and reconciliation completed successfully!
