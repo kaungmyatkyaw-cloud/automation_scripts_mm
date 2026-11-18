@@ -47,7 +47,7 @@ SENDER_PASSWORD = os.getenv("SMTP_SENDER_PASSWORD", "")
 receivers_raw = os.getenv("mkitchen_email", "")
 RECEIVER_EMAILS = [email.strip() for email in receivers_raw.split(",") if email.strip()]
 
-cc_receivers_raw = os.getenv("cccccc", "")
+cc_receivers_raw = os.getenv("testing_cc", "")
 CC_EMAILS = [email.strip() for email in cc_receivers_raw.split(",") if email.strip()]
 
 
