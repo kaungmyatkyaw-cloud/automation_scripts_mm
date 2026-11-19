@@ -33,7 +33,7 @@ DB_CONFIG = {
     'password': os.getenv('MYSQL_PASSWORD_DAS') or os.getenv('BI_DB_PASS'),
     'host': os.getenv('MYSQL_HOSTNAME_DAS') or os.getenv('BI_DB_HOST'),
     'port': int(os.getenv('MYSQL_PORT_DAS') or os.getenv('BI_DB_PORT') or 25060),
-    'database': os.getenv('DAS_DB_NAME', 'das-db'),
+    'database': os.getenv('BI_DB_NAME', 'bi_database'),
     'use_pure': True,
     'ssl_disabled': False
 }
@@ -49,9 +49,9 @@ SMTP_CONFIG = {
     'sender_password': os.getenv('SMTP_SENDER_PASSWORD'),
     'smtp_server': 'smtp.gmail.com',
     'smtp_port': 587,
-    'mkitchen_email': parse_email_list('mkitchen_email'),
-    'mtrading_email': parse_email_list('mtrading_email'),
-    'cc_emails': parse_email_list('cccccc')
+    'mkitchen_email': parse_email_list('testing_mail'),
+    'mtrading_email': parse_email_list('testing_mail'),
+    'cc_emails': parse_email_list('testing_cc')
 }
 
 SHEETS_CONFIG = {
@@ -74,97 +74,40 @@ if not os.path.exists(SERVICE_ACCOUNT_FILE):
     SERVICE_ACCOUNT_FILE = os.path.join(base_dir, 'service_account_update.json')
 
 # ==========================================
-# 2. SQL QUERY (Updated M-Kitchen Naming)
+# 2. SQL QUERY (Querying from View vw_receivables_aging)
 # ==========================================
 SQL_QUERY = """
-SELECT
-    CASE 
-        WHEN inv.business_id = '84093770-29ad-4e8e-9da1-babe583c0d69' AND inv.branch_id = 34 THEN 'M-Kitchen'
-        WHEN (inv.business_id = '84093770-29ad-4e8e-9da1-babe583c0d69' AND (TRIM(CAST(inv.branch_id AS CHAR)) != '34' OR inv.branch_id IS NULL))
-             OR inv.business_id = '7ef7c6c0-b59d-4be9-960c-7fa573038642' THEN 'MTrading'
-        ELSE 'Other'
-    END AS business_unit,
-
-    ANY_VALUE(so.order_number) AS order_number,
-    ANY_VALUE(so.notes) AS notes,
-    inv.invoice_number,
-    inv.current_status,
-    
-    CASE 
-        WHEN inv.invoice_payment_terms = 'DueOnReceipt' 
-             AND ANY_VALUE(dm.name) LIKE '%M-Express%'
-             AND CURRENT_DATE() > inv.invoice_due_date 
-             AND CURRENT_DATE() <= DATE_ADD(inv.invoice_due_date, INTERVAL 4 DAY)
-             THEN 'DELAYED COD'
-        WHEN CURRENT_DATE() > inv.invoice_due_date THEN 'LATE'
-        WHEN inv.invoice_due_date BETWEEN CURRENT_DATE() AND DATE_ADD(CURRENT_DATE(), INTERVAL 7 DAY) 
-            THEN 'TO BE PAID THIS WEEK'
-        ELSE 'ON TIME'
-    END AS payment_status,
-    
-    inv.invoice_payment_terms,
-    GROUP_CONCAT(DISTINCT paym.name SEPARATOR ', ') as PaymentMethods,
-    ANY_VALUE(dm.name) AS delivery_method_name,
-    
-    MAX(CASE 
-        WHEN inv.invoice_payment_terms = 'DueOnReceipt' AND dm.name LIKE '%M-Express%'
-        THEN 'TRUE' 
-        ELSE 'FALSE' 
-    END) AS MarathonCOD,
-    
-    GROUP_CONCAT(DISTINCT pay.payment_number ORDER BY pay.payment_date ASC SEPARATOR '; ') AS Payments,
-    ROUND(DATEDIFF(inv.invoice_due_date, CURRENT_DATE()), 0) AS days_remaining,
-    inv.invoice_date,
-    DATE_FORMAT(inv.invoice_date, '%M') AS InvoiceMonth,
-    
-    ANY_VALUE(CASE 
-        WHEN g3.name IS NOT NULL THEN g3.name 
-        WHEN g2.name IS NOT NULL THEN g2.name 
-        ELSE g1.name 
-    END) AS sales_channel,
-    ANY_VALUE(CASE 
-        WHEN g3.name IS NOT NULL THEN g2.name 
-        ELSE g1.name 
-    END) AS group_l1,
-    ANY_VALUE(g1.name) AS group_l2,
-
-    ANY_VALUE(branch.name) AS branch,
-    inv.invoice_due_date,
-    inv.invoice_total_amount,
-    inv.invoice_total_paid_amount,
-    inv.remaining_balance,
-    ANY_VALUE(salesp.name) AS salesp_name,
-    ANY_VALUE(cust.name) AS cust_name,
-    
-    inv.invoice_number AS copy_invoice_number,
-    inv.invoice_date AS copy_invoice_date,
-    inv.remaining_balance AS copy_remaining_balance,
-    ANY_VALUE(cust.name) AS copy_cust_name
-    
-FROM sales_invoices AS inv
-LEFT JOIN customers AS cust ON inv.customer_id = cust.id
-LEFT JOIN customer_groups AS g1 ON cust.group_id = g1.id
-LEFT JOIN customer_groups AS g2 ON g1.parent_group_id = g2.id
-LEFT JOIN customer_groups AS g3 ON g2.parent_group_id = g3.id
-LEFT JOIN sales_people AS salesp ON inv.sales_person_id = salesp.id
-LEFT JOIN branches AS branch ON inv.branch_id = branch.id
-LEFT JOIN sales_orders AS so ON inv.sales_order_id = so.id
-LEFT JOIN paid_invoices AS pi ON inv.id = pi.invoice_id
-LEFT JOIN customer_payments AS pay ON pi.customer_payment_id = pay.id
-LEFT JOIN payment_methods AS paym ON so.payment_method_id = paym.id 
-LEFT JOIN delivery_methods AS dm ON so.delivery_method_id = dm.id
-
-WHERE (
-        (inv.business_id = '84093770-29ad-4e8e-9da1-babe583c0d69' AND inv.branch_id = 34)
-        OR 
-        ((inv.business_id = '84093770-29ad-4e8e-9da1-babe583c0d69' AND (TRIM(CAST(inv.branch_id AS CHAR)) != '34' OR inv.branch_id IS NULL))
-         OR inv.business_id = '7ef7c6c0-b59d-4be9-960c-7fa573038642')
-      )
-  AND inv.current_status NOT IN ('Paid', 'Void')
-  AND inv.invoice_number != 'Customer Opening Balance'
-
-GROUP BY inv.id
-ORDER BY inv.remaining_balance DESC;
+SELECT 
+    business_unit,
+    order_number,
+    notes,
+    invoice_number,
+    current_status,
+    payment_status,
+    invoice_payment_terms,
+    PaymentMethods,
+    delivery_method_name,
+    MarathonCOD,
+    Payments,
+    days_remaining,
+    invoice_date,
+    InvoiceMonth,
+    sales_channel,
+    group_l1,
+    group_l2,
+    branch,
+    invoice_due_date,
+    invoice_total_amount,
+    invoice_total_paid_amount,
+    remaining_balance,
+    salesp_name,
+    cust_name,
+    copy_invoice_number,
+    copy_invoice_date,
+    copy_remaining_balance,
+    copy_cust_name
+FROM vw_receivables_aging
+ORDER BY remaining_balance DESC;
 """
 
 # ==========================================
@@ -254,19 +197,28 @@ def generate_pivot_table_html(df_unit):
     pivot_df['Grand Total'] = pivot_df[target_statuses].sum(axis=1)
 
     # HTML Header
+    # HTML Header (Proper 2-Row Aligned Header)
     html_out = """
     <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; border: 1px solid #a6b9d1; color: #000000;">
         <thead>
-            <tr style="background-color: #dce6f1; font-weight: bold; text-align: left; border-bottom: 2px solid #8ea9db;">
-                <th style="padding: 5px; border: 1px solid #b8cce4;" colspan="4">
-                    Sum of remaining_balance<br>
-                    <span style="font-weight: normal; color: #333;">branch &nbsp;| &nbsp;sales_channel &nbsp;| &nbsp;salesp_name &nbsp;| &nbsp;group_l1</span>
+            <tr style="background-color: #dce6f1; font-weight: bold; text-align: left; border-bottom: 1px solid #b8cce4;">
+                <th style="padding: 6px; border: 1px solid #b8cce4; color: #1b4f72;" colspan="4">
+                    Sum of Remaining Balance (MMK)
                 </th>
-                <th style="padding: 5px; text-align: right; border: 1px solid #b8cce4; background-color: #f2d7d5; color: #900c3f;">LATE</th>
-                <th style="padding: 5px; text-align: right; border: 1px solid #b8cce4; background-color: #d4efdf; color: #1e8449;">DELAYED COD</th>
-                <th style="padding: 5px; text-align: right; border: 1px solid #b8cce4; background-color: #d4efdf; color: #1e8449;">ON TIME</th>
-                <th style="padding: 5px; text-align: right; border: 1px solid #b8cce4; background-color: #fdebd0; color: #b9770e;">TO BE PAID THIS WEEK</th>
-                <th style="padding: 5px; text-align: right; border: 1px solid #b8cce4; background-color: #ebf5fb; color: #1b4f72;">Grand Total</th>
+                <th style="padding: 6px; border: 1px solid #b8cce4; text-align: center; color: #1b4f72;" colspan="5">
+                    Payment Aging Status
+                </th>
+            </tr>
+            <tr style="background-color: #edf2f8; font-weight: bold; text-align: left; border-bottom: 2px solid #8ea9db; color: #1f2937;">
+                <th style="padding: 6px; border: 1px solid #b8cce4; width: 18%;">Branch</th>
+                <th style="padding: 6px; border: 1px solid #b8cce4; width: 14%;">Sales Channel</th>
+                <th style="padding: 6px; border: 1px solid #b8cce4; width: 15%;">Sales Person</th>
+                <th style="padding: 6px; border: 1px solid #b8cce4; width: 15%;">Customer Group</th>
+                <th style="padding: 6px; text-align: right; border: 1px solid #b8cce4; background-color: #f2d7d5; color: #900c3f;">LATE</th>
+                <th style="padding: 6px; text-align: right; border: 1px solid #b8cce4; background-color: #d4efdf; color: #1e8449;">DELAYED COD</th>
+                <th style="padding: 6px; text-align: right; border: 1px solid #b8cce4; background-color: #d4efdf; color: #1e8449;">ON TIME</th>
+                <th style="padding: 6px; text-align: right; border: 1px solid #b8cce4; background-color: #fdebd0; color: #b9770e;">TO BE PAID THIS WEEK</th>
+                <th style="padding: 6px; text-align: right; border: 1px solid #b8cce4; background-color: #ebf5fb; color: #1b4f72;">Grand Total</th>
             </tr>
         </thead>
         <tbody>
@@ -295,7 +247,7 @@ def generate_pivot_table_html(df_unit):
                     html_out += f'<td style="padding: 4px; border: 1px solid #e0e0e0; font-weight: bold; width: 18%;">{("- " + str(branch_name)) if channel_first and salesp_first else ""}</td>'
                     
                     # Sales Channel
-                    html_out += f'<td style="padding: 4px; border: 1px solid #e0e0e0; color: #1a5276; font-weight: 500; width: 14%;>{("- " + str(channel_name)) if salesp_first else ""}</td>'
+                    html_out += f'<td style="padding: 4px; border: 1px solid #e0e0e0; color: #1a5276; font-weight: 500; width: 14%;">{("- " + str(channel_name)) if salesp_first else ""}</td>'
                     salesp_first = False
                     channel_first = False
                     
@@ -369,26 +321,14 @@ def generate_data_fetching_info_html():
     
     return f"""
     <div style="background-color: #f8f9fa; border-left: 4px solid #1a73e8; padding: 15px; margin-top: 20px; margin-bottom: 20px; font-size: 13px;">
-        <h4 style="margin-top: 0; color: #1a73e8; font-size: 14px;">ℹ️ Data Fetching Scope & Business Logic</h4>
+        <h4 style="margin-top: 0; color: #1a73e8; font-size: 14px;">ℹ️ Data Fetching Scope & Business Logic (from View)</h4>
         <ul style="margin: 0; padding-left: 20px; color: #4a4a4a; line-height: 1.8;">
-            <li><b>Database:</b> Marathon DAS-DB [<code style="{code}">das-db</code>]</li>
-            <li><b>Business Scope & Entity Partitioning:</b>
-                <ul>
-                    <li><b>M-Kitchen:</b> [<code style="{code}">business_id = '84093770-29ad-4e8e-9da1-babe583c0d69' AND branch_id = 34</code>]</li>
-                    <li><b>MTrading:</b> [<code style="{code}">business_id = '7ef7c6c0-b59d-4be9-960c-7fa573038642'</code>] OR M-Kitchen non-branch 34 records [<code style="{code}">branch_id != 34 OR branch_id IS NULL</code>]</li>
-                </ul>
-            </li>
-            <li><b>Data Scope & Exclusions:</b> Unpaid & Outstanding invoices [<code style="{code}">current_status NOT IN ('Paid', 'Void')</code>]. Excludes historical balance adjustments [<code style="{code}">invoice_number != 'Customer Opening Balance'</code>].</li>
-            <li><b>Payment Status Classification Logic:</b>
-                <ul>
-                    <li><b style="color: #1e8449;">ON TIME:</b> Payment due beyond 7 days.</li>
-                    <li><b style="color: #1e8449;">DELAYED COD:</b> Terms are <code style="{code}">DueOnReceipt</code> via M-Express delivery [<code style="{code}">dm.name LIKE '%M-Express%'</code>] and overdue between 1 to 4 days [<code style="{code}">due_date < CURRENT_DATE() <= due_date + 4</code>].</li>
-                    <li><b style="color: #b9770e;">TO BE PAID THIS WEEK:</b> Invoice due date falls within the next 7 days [<code style="{code}">BETWEEN CURRENT_DATE() AND CURRENT_DATE() + 7</code>].</li>
-                    <li><b style="color: #900c3f;">LATE:</b> Invoice due date is past current date [<code style="{code}">CURRENT_DATE() > invoice_due_date</code>].</li>
-                </ul>
-            </li>
-            <li><b>Delivery & Payment Aggregation:</b> Flagged <code style="{code}">MarathonCOD = 'TRUE'</code> for M-Express DueOnReceipt orders. Payment History & Methods aggregated via <code style="{code}">GROUP_CONCAT</code>.</li>
-            <li><b>Customer Hierarchy Mapping:</b> Multi-level customer groups up to 3 levels deep [<code style="{code}">g3 > g2 > g1</code>] to map Sales Channels dynamically.</li>
+            <li><b>Database View:</b> [<code style="{code}">vw_receivables_aging</code>]</li>
+            <li><b>Business Scope & Entity Partitioning:</b> Automatically handled via view definitions for M-Kitchen and MTrading.</li>
+            <li><b>Data Scope & Exclusions:</b> Unpaid & Outstanding invoices (Excludes Paid, Void, and Opening Balances).</li>
+            <li><b>Payment Status Classification Logic:</b> ON TIME, DELAYED COD, TO BE PAID THIS WEEK, and LATE pre-calculated via view.</li>
+            <li><b>Delivery & Payment Aggregation:</b> Flagged <code style="{code}">MarathonCOD</code> and payment strings aggregated via view.</li>
+            <li><b>Customer Hierarchy Mapping:</b> Multi-level customer groups mapped dynamically.</li>
         </ul>
     </div>
     """
@@ -477,13 +417,13 @@ def send_individual_email(unit_name, df_unit, to_emails, cc_emails):
 def main():
     print("=== AUTOMATION PIPELINE STARTED ===")
 
-    # 1. Fetch Data
+    # 1. Fetch Data from View
     df_all = extract_data_from_db()
     if df_all.empty:
-        print("⚠️ Warning: No records found from MySQL query. Exiting process.")
+        print("⚠️ Warning: No records found from MySQL view. Exiting process.")
         return
 
-    # 2. Partition Data (Updated BU Name: M-Kitchen)
+    # 2. Partition Data by Business Unit
     df_mk = df_all[df_all['business_unit'] == 'M-Kitchen']
     df_mt = df_all[df_all['business_unit'] == 'MTrading']
 
