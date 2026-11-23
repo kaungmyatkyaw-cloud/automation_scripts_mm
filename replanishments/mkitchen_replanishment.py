@@ -7,7 +7,7 @@ from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 
 # .env ဖိုင်ရှိရာ သတ်မှတ်ထားသော Path ကို ညွှန်ပြ၍ Load လုပ်ခြင်း
-dotenv_path = r'C:\Users\kye58\marathon-projects\clone_repo\automation_scripts_mm\.env'
+dotenv_path = r'D:\k_workspace\data_posting\.env'
 load_dotenv(dotenv_path=dotenv_path)
 
 # Environment Variables များမှ Database Configuration များကို ဆွဲယူခြင်း
