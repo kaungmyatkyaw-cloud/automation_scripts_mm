@@ -26,7 +26,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module="pandas")
 load_dotenv()
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-JSON_KEYFILE = os.path.join(CURRENT_DIR, "service_account_update.json")
+JSON_KEYFILE = os.path.join(CURRENT_DIR, "mysql-to-sheet-502710-a1c9868da055.json")
 CSV_FILE_PATH = os.path.join(CURRENT_DIR, "mkitchen_sales_report.csv")
 
 # MySQL Configuration

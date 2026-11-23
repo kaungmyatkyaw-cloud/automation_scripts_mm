@@ -49,9 +49,9 @@ SMTP_CONFIG = {
     'sender_password': os.getenv('SMTP_SENDER_PASSWORD'),
     'smtp_server': 'smtp.gmail.com',
     'smtp_port': 587,
-    'mkitchen_email': parse_email_list('testing_mail'),
-    'mtrading_email': parse_email_list('testing_mail'),
-    'cc_emails': parse_email_list('testing_cc')
+    'mkitchen_email': parse_email_list('mkitchen_email'),
+    'mtrading_email': parse_email_list('mtrading_email'),
+    'cc_emails': parse_email_list('cccccc')
 }
 
 SHEETS_CONFIG = {
@@ -69,9 +69,9 @@ SHEETS_CONFIG = {
     }
 }
 
-SERVICE_ACCOUNT_FILE = os.path.join(base_dir, 'service_account_update.json')
+SERVICE_ACCOUNT_FILE = os.path.join(base_dir, 'mysql-to-sheet-502710-a1c9868da055.json')
 if not os.path.exists(SERVICE_ACCOUNT_FILE):
-    SERVICE_ACCOUNT_FILE = os.path.join(base_dir, 'service_account_update.json')
+    SERVICE_ACCOUNT_FILE = os.path.join(base_dir, 'mysql-to-sheet-502710-a1c9868da055.json')
 
 # ==========================================
 # 2. SQL QUERY (Querying from View vw_receivables_aging)
@@ -345,7 +345,7 @@ def send_individual_email(unit_name, df_unit, to_emails, cc_emails):
         msg['Cc'] = ", ".join(cc_emails)
         
     # Standard Title
-    msg['Subject'] = f"Weekly Accounts Receivable & Outstanding Report ({unit_name} system) - {datetime.now().strftime('%Y-%m-%d')}"
+    msg['Subject'] = f"Weekly Accounts Receivable & Outstanding Report ({unit_name}) - {datetime.now().strftime('%Y-%m-%d')}"
 
     # Generate Components
     pivot_table_html = generate_pivot_table_html(df_unit)
