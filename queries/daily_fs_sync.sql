@@ -557,6 +557,14 @@ END
 WHERE margin_pct IS NULL OR margin_pct = 0;
 
 select max(sale_date) from fact_saless fs ;
+
+TRUNCATE TABLE customers;
+INSERT INTO bi_database.customers
+SELECT * FROM `das-db`.customers;
+
+TRUNCATE TABLE customer_groups;
+INSERT INTO bi_database.customer_groups
+SELECT * FROM `das-db`.customer_groups;
 -- ################################################################################
 ## ETL SCRIPT COMPLETED HERE
 -- ################################################################################
