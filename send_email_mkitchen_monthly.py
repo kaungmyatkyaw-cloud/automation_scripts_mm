@@ -528,7 +528,7 @@ LEFT JOIN bi_database.sales_people sp
     AND sp.business_id = fs.business_id
   WHERE fs.business_id = '84093770-29ad-4e8e-9da1-babe583c0d69'
     AND fs.branch_id = 34
-AND sale_datetime >= '2026-10-01 00:00:00'
+AND sale_datetime >= '2026-10-01 00:00:00'x
 AND sale_datetime <= '2026-10-31 23:59:59'
   -- Exclude Commercial samples
   AND (cg.parent_group_id != 30 OR cg.id != 30)

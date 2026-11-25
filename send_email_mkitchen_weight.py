@@ -24,7 +24,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module="pandas")
 load_dotenv()
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-JSON_KEYFILE = os.path.join(CURRENT_DIR, "service_account_update.json")
+JSON_KEYFILE = os.path.join(CURRENT_DIR, "mysql-to-sheet-502710-a1c9868da055.json")
 CSV_PRICELIST_PATH = os.path.join(CURRENT_DIR, "mkitchen_pricelist_master.csv")
 CSV_INVOICE_PATH = os.path.join(CURRENT_DIR, "mkitchen_invoice_weight.csv")
 
@@ -47,7 +47,7 @@ SENDER_PASSWORD = os.getenv("SMTP_SENDER_PASSWORD", "")
 receivers_raw = os.getenv("mkitchen_email", "")
 RECEIVER_EMAILS = [email.strip() for email in receivers_raw.split(",") if email.strip()]
 
-cc_receivers_raw = os.getenv("cccccc", "")
+cc_receivers_raw = os.getenv("testing_cc", "")
 CC_EMAILS = [email.strip() for email in cc_receivers_raw.split(",") if email.strip()]
 
 
